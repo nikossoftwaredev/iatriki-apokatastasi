@@ -14,8 +14,8 @@ const AboutDoctor = (): JSX.Element => {
     <main className='w-full flex flex-col items-center justify-center mt-10'>
       <Card className='xl:w-2/4 md:w-3/4 items-center justify-center p-5'>
         {/* <IconTitle title='O ΓΙΑΤΡΟΣ' icon={<MdInfoOutline size={30} />} /> */}
-        <section className='grid grid-cols-3 gap-10 justify-center items-center'>
-          <div className='h-full max-h-96 relative col-span-1'>
+        <section className='grid grid-cols-1 gap-10 justify-center items-center md:grid-cols-3'>
+          <div className='h-full max-h-full relative col-span-1'>
             <Image src={doctorImage} alt='iatros' className='rounded-xl w-full' />
           </div>
           <div className='flex flex-col col-span-2'>
