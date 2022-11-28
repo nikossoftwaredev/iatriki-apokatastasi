@@ -26,13 +26,13 @@ const items = [
 
 const Banner = () => {
   return (
-    <div className={`w-full flex items-center justify-center`}>
-      <div className='sm:w-4/5 xl:w-2/3 shadow-lg bg-blue p-14 text-white rounded-lg small'>
-        <section className='flex flex-col md:flex-row gap-4 justify-center'>
+    <div className={`relative w-full flex items-center justify-center `}>
+      <div className='absolute -top-1/2 -translate-y-1/2 sm:w-4/5 xl:w-2/3 shadow-lg bg-blue p-14 text-white rounded-lg small'>
+        <section className='flex flex-col lg:flex-row gap-4 justify-center'>
           {items.map(item => (
             <div
               key={item.id}
-              className='flex gap-5 items-start justify-start md:items-center md:justify-center'
+              className='flex gap-5 items-start justify-start lg:items-center lg:justify-center'
             >
               {item.icon}
               <div className='flex justify-start items-start flex-col gap-2'>
