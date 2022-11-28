@@ -1,4 +1,5 @@
 import AboutDoctor from 'ui/AboutDoctor';
+import Banner from 'ui/Banner';
 import Button from 'ui/Button';
 
 const Home = () => {
@@ -13,6 +14,8 @@ const Home = () => {
         </div>
       </div>
       <div className='skata w-full' />
+      <Banner />
+      <div className='xl:h-36 md:h-[60vh]'></div>
       <AboutDoctor />
       {/* <Image className='w-full' src={reception} alt='recepetion' /> */}
     </main>

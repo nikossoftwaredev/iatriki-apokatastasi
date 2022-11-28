@@ -17,8 +17,8 @@ const items = [
 const Banner = () => {
   return (
     <div className='relative '>
-      <div className='w-full  absolute flex flex-col items-center justify-center -top-[125px]'>
-        <div className='xs:4/5 sm:w-4/5 md:w-4/5 lg:3/4 xl:w-3/4 shadow-lg bg-blue p-16 text-white rounded-lg small'>
+      <div className='w-full  absolute flex flex-col items-center justify-center xl:-top-[125px] md:-top-[40px]'>
+        <div className='xs:4/5 sm:w-4/5 md:w-4/5 lg:3/4 xl:w-2/3 shadow-lg bg-blue p-14 text-white rounded-lg small'>
           <section className='grid xl:grid-flow-col xl:justify-evenly md:row-span-1 md:grid-flow-row md:items-center md:justify-center '>
             {items.map(item => (
               <div key={item.id} className='grid grid-cols-3 md:my-4'>

@@ -12,11 +12,11 @@ const secondColumn = knowledge.splice(-knowledgeLength);
 const AboutDoctor = (): JSX.Element => {
   return (
     <main className='w-full flex flex-col items-center justify-center mt-10'>
-      <Card className='w-2/4 items-center justify-center p-5'>
+      <Card className='xl:w-2/4 md:w-3/4 items-center justify-center p-5'>
         {/* <IconTitle title='O ΓΙΑΤΡΟΣ' icon={<MdInfoOutline size={30} />} /> */}
         <section className='grid grid-cols-3 gap-10 justify-center items-center'>
           <div className='h-full max-h-96 relative col-span-1'>
-            <Image src={doctorImage} alt='iatros' className='rounded-xl' fill />
+            <Image src={doctorImage} alt='iatros' className='rounded-xl w-full' />
           </div>
           <div className='flex flex-col col-span-2'>
             <span>
