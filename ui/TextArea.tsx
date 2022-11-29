@@ -1,7 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { HTMLAttributes } from 'react';
+import { DetailedHTMLProps, TextareaHTMLAttributes } from 'react';
 
-type TextFieldProps = HTMLAttributes<HTMLTextAreaElement>;
+type TextFieldProps = DetailedHTMLProps<
+  TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
+>;
 
 const TextArea = (props: TextFieldProps) => {
   const { className } = props;

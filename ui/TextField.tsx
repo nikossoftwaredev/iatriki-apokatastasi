@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { HTMLAttributes } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
-type TextFieldProps = HTMLAttributes<HTMLInputElement>;
+type TextFieldProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 const TextField = (props: TextFieldProps) => {
   const { className } = props;

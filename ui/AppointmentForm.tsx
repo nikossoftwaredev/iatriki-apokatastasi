@@ -14,13 +14,12 @@ interface InputFieldProps {
   placeholder: string;
   required: boolean;
   colSpan?: number;
-  autocomplete?: string;
 }
 
 const inputFields: InputFieldProps[] = [
   {
     id: 'appointment-name',
-    autocomplete: 'name',
+
     dataField: 'name',
     inputType: 'text',
     placeholder: 'Όνομα',
@@ -28,7 +27,7 @@ const inputFields: InputFieldProps[] = [
   },
   {
     id: 'appointment-email',
-    autocomplete: 'email',
+
     dataField: 'email',
     inputType: 'email',
     placeholder: 'Email',
@@ -36,7 +35,7 @@ const inputFields: InputFieldProps[] = [
   },
   {
     id: 'appointment-phone',
-    autocomplete: 'phone',
+
     dataField: 'phone',
     inputType: 'tel',
     placeholder: 'Τηλέφωνο',
@@ -68,7 +67,7 @@ const AppointmentForm = () => {
   });
 
   const onChangeFormData = useCallback(
-    (dataField: string) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    (dataField: string) => (e: any) => {
       setFormData(prev => ({ ...prev, [dataField]: e.target.value }));
     },
     []
@@ -81,8 +80,7 @@ const AppointmentForm = () => {
         <form>
           <div className='grid p-4 gap-2 sm:grid-cols-1 md:grid-cols-2'>
             {inputFields.map(inputField => {
-              const { dataField, inputType, placeholder, required, colSpan, id, autocomplete } =
-                inputField;
+              const { dataField, inputType, placeholder, required, colSpan, id } = inputField;
 
               return inputType === 'textarea' ? (
                 <TextArea
@@ -97,7 +95,6 @@ const AppointmentForm = () => {
               ) : (
                 <TextField
                   id={id}
-                  autoComplete={autocomplete}
                   key={dataField}
                   required={required}
                   type={inputType}
