@@ -17,7 +17,6 @@ const Home = () => {
       <Banner />
       <div className='xl:h-36 md:h-[60vh]'></div>
       <AboutDoctor />
-      {/* <Image className='w-full' src={reception} alt='recepetion' /> */}
     </main>
   );
 };
