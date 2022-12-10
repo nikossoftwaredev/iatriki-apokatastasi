@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, HTMLInputTypeAttribute, useCallback, useState } from 'react';
+import { HTMLInputTypeAttribute, useCallback, useState } from 'react';
 import Button from 'ui/Button';
 import Card from 'ui/Card';
 import TextField from 'ui/TextField';
