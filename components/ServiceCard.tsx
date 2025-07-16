@@ -31,7 +31,9 @@ export default function ServiceCard({
       whileHover={{ y: -5 }}
       className="group"
     >
-      <Link href={`/services/${slug}`}>
+      <Link href={       
+        `/services/${slug}`
+      }>
         <div className={cn(
           "bg-white rounded-xl p-6 shadow-sm border border-gray-100",
           "hover:shadow-lg hover:border-primary/20 transition-all duration-300",

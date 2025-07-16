@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import AppointmentButton from "@/components/AppointmentButton";
 import { Check, Calendar, Users } from "lucide-react";
 import Link from "next/link";
-import { getYearsOfExperience, stats } from "@/lib/general";
+import { getYearsOfExperience, stats, FULL_NAME } from "@/lib/general";
 
 export default function HeroSection() {
   const yearsOfExperience = getYearsOfExperience();
@@ -24,13 +24,14 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Ιατρική Αποκατάστασης
-              <span className="block text-primary mt-2">Εξειδικευμένη Φροντίδα</span>
+              Ιατρική Αποκατάσταση στην Ηλιούπολη
+              <span className="block text-primary mt-2">Εξειδικευμένη Φροντίδα από τον {FULL_NAME}</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Ολοκληρωμένες υπηρεσίες φυσικής ιατρικής και αποκατάστασης 
-              με σύγχρονες μεθόδους θεραπείας για την αντιμετώπιση του πόνου 
-              και την αποκατάσταση της λειτουργικότητας.
+              Το ιατρείο μας στην Ηλιούπολη προσφέρει ολοκληρωμένες υπηρεσίες φυσικής ιατρικής 
+              και αποκατάστασης με σύγχρονες θεραπείες όπως προλοθεραπεία (Prolotherapy), 
+              φυσικοθεραπεία, βελονισμός και PRP. Εξειδικευμένη αντιμετώπιση του πόνου 
+              και αποκατάσταση της λειτουργικότητας στην καρδιά της Ηλιούπολης.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 relative z-20">
               <AppointmentButton size="lg" />
@@ -52,7 +53,7 @@ export default function HeroSection() {
             <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl flex items-center justify-center">
               <img 
                 src="/images/hero-image.webp" 
-                alt="Ιατρείο Αποκατάστασης"
+                alt="Ιατρείο Αποκατάστασης Ηλιούπολη - Φυσιατρική"
                 className="rounded-2xl object-cover w-full h-full"
               />
             </div>
@@ -81,7 +82,7 @@ export default function HeroSection() {
               <Users className="h-8 w-8 text-primary" />
             </div>
             <div className="text-3xl font-bold text-gray-900">{stats.satisfiedClients}</div>
-            <div className="text-gray-600">{stats.clientsLabel}</div>
+            <div className="text-gray-600">Ικανοποιημένοι Ασθενείς στην Ηλιούπολη</div>
           </div>
 
           {/* EOPYY Partnership */}

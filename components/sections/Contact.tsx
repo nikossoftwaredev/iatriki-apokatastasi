@@ -6,7 +6,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CircleIcon } from "@/components/CircleIcon";
 import { Phone, Mail, MapPin, Clock, User, Calendar, MessageSquare, Briefcase } from "lucide-react";
-import { ADDRESS, PHONE, PHONE2, MAIL, workingHours, services, MAP_IFRAME } from "@/lib/general";
+import { ADDRESS, PHONE, PHONE2, MAIL, workingHours, services, MAP_IFRAME, DOMAIN } from "@/lib/general";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export function ContactSection() {
   const [loading, setLoading] = useState(false);
@@ -47,17 +54,53 @@ export function ContactSection() {
           {/* Contact Information */}
           <div className="space-y-6">
             <Card className="overflow-hidden">
-              <div className="relative h-64">
-                <img
-                  src="/images/clinic-exterior.jpg"
-                  alt="Ιατρείο Φυσικής Ιατρικής και Αποκατάστασης"
-                  className="object-cover w-full h-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white text-2xl font-bold">Επισκεφτείτε μας</h3>
-                </div>
-              </div>
+              <CardHeader>
+                <CardTitle>Ο χώρος μας</CardTitle>
+                <p className="text-sm text-gray-600">
+                  Ένας σύγχρονος και πλήρως εξοπλισμένος χώρος αποκατάστασης στην καρδιά της Ηλιούπολης
+                </p>
+              </CardHeader>
+              <CardContent className="p-0">
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  className="w-full"
+                >
+                  <CarouselContent>
+                    {[
+                      { src: `https://www.${DOMAIN}/images/stories/slideshow/1-iatreio_1.jpg`, title: "Χώρος αναμονής" },
+                      { src: `https://www.${DOMAIN}/images/stories/slideshow/2-iatreio_2.jpg`, title: "Χώρος βελτίωσης μυικής απόδοσης" },
+                      { src: `https://www.${DOMAIN}/images/stories/slideshow/3-iatreio_3.jpg`, title: "Χώρος θεραπευτικών ασκήσεων" },
+                      { src: `https://www.${DOMAIN}/images/stories/slideshow/4-iatreio_4.jpg`, title: "Γυμναστήριο" },
+                      { src: `https://www.${DOMAIN}/images/stories/slideshow/5-iatreio_5.jpg`, title: "Χώρος θεραπευτικής μάλαξης και βελονισμού" },
+                      { src: `https://www.${DOMAIN}/images/stories/slideshow/6-iatreio_6.jpg`, title: "Χώρος εφαρμογής φυσικών μέσων" },
+                      { src: `https://www.${DOMAIN}/images/stories/slideshow/7-iatreio_7.jpg`, title: "Κρουστικοί Υπέρηχοι" },
+                    ].map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="relative h-64">
+                          <img
+                            src={image.src}
+                            alt={image.title}
+                            className="object-cover w-full h-full"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h4 className="text-white font-semibold">
+                              {image.title}
+                            </h4>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="hidden sm:flex left-2" />
+                  <CarouselNext className="hidden sm:flex right-2" />
+                </Carousel>
+              </CardContent>
+            </Card>
+
+            <Card>
               <CardHeader>
                 <CardTitle>Στοιχεία Επικοινωνίας</CardTitle>
               </CardHeader>
