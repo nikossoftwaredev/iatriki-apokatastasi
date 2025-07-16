@@ -1,0 +1,129 @@
+/* Prose styles for markdown content */
+.prose {
+  @apply max-w-[65ch] text-gray-900;
+}
+
+.prose h1 {
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-gray-900 mt-12 mb-6;
+}
+
+.prose h2 {
+  @apply scroll-m-20 text-3xl font-semibold tracking-tight mt-12 mb-4 text-gray-900;
+}
+
+.prose h3 {
+  @apply scroll-m-20 text-2xl font-semibold mt-8 mb-4 tracking-tight text-gray-900;
+}
+
+.prose h4 {
+  @apply scroll-m-20 text-xl font-semibold mt-8 mb-4 tracking-tight text-gray-900;
+}
+
+.prose h5 {
+  @apply scroll-m-20 text-lg font-semibold mt-8 mb-4 tracking-tight text-gray-900;
+}
+
+.prose h6 {
+  @apply scroll-m-20 text-base font-semibold mt-8 mb-4 tracking-tight text-gray-900;
+}
+
+.prose p {
+  @apply leading-[175%] mb-6 text-gray-700;
+}
+
+.prose li {
+  @apply leading-[175%] text-gray-700;
+}
+
+.prose a {
+  @apply font-medium text-primary underline underline-offset-4 hover:text-primary/80;
+}
+
+.prose blockquote {
+  @apply mt-6 mb-6 border-l-4 border-gray-300 pl-6 italic text-gray-600 bg-gray-50 py-4;
+}
+
+.prose table {
+  @apply my-6 w-full overflow-y-auto border border-gray-300 rounded-md;
+}
+
+.prose thead tr {
+  @apply m-0 border-t border-gray-300 p-0 even:bg-gray-100;
+}
+
+.prose th {
+  @apply border border-gray-300 px-4 py-2 text-left font-bold text-gray-900 bg-gray-100;
+}
+
+.prose tbody tr {
+  @apply m-0 border-t border-gray-300 p-0 even:bg-gray-50;
+}
+
+.prose td {
+  @apply border border-gray-300 px-4 py-2 text-left text-gray-700;
+}
+
+.prose ul {
+  @apply my-6 ml-6 list-disc;
+}
+
+.prose ul li {
+  @apply mt-2;
+}
+
+.prose ol {
+  @apply my-6 ml-6 list-decimal;
+}
+
+.prose ol li {
+  @apply mt-2;
+}
+
+.prose pre {
+  @apply bg-gray-100 border border-gray-300 rounded-md p-4 my-6 text-sm overflow-x-auto text-gray-900;
+}
+
+.prose code {
+  @apply bg-gray-100 border border-gray-300 rounded px-1 py-0.5 font-mono text-sm text-gray-900;
+}
+
+.prose pre code {
+  @apply bg-transparent border-0 p-0;
+}
+
+.prose img {
+  @apply my-6 rounded-md border border-gray-300;
+}
+
+.prose hr {
+  @apply my-10 border-gray-300;
+}
+
+.prose strong {
+  @apply font-semibold text-gray-900;
+}
+
+.prose em {
+  @apply italic text-gray-700;
+}
+
+/* Large prose variant */
+.prose-lg {
+  @apply text-lg;
+}
+
+.prose-lg p {
+  @apply text-lg leading-[175%];
+}
+
+.prose-lg h1 {
+  @apply text-5xl lg:text-6xl;
+}
+
+.prose-lg h2 {
+  @apply text-4xl;
+}
+
+.prose-lg h3 {
+  @apply text-3xl;
+}
