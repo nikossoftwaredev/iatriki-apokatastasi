@@ -7,7 +7,6 @@ description: "Ανακαλύψτε τη Neural Fascial Prolotherapy, μια πρ
 keywords: ["Neural Fascial Prolotherapy", "NFP", "προλοθεραπεία", "νευρική θεραπεία", "χρόνιος πόνος", "αναγεννητική ιατρική", "Brian Shiple"]
 ---
 
-# Neural Fascial Prolotherapy (NFP): Το Μέλλον της Αναγεννητικής Ιατρικής
 
 ## Εισαγωγή
 

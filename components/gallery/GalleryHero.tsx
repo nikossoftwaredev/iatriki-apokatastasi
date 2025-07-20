@@ -18,11 +18,11 @@ export default function GalleryHero() {
           </div>
           
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-            Φωτογραφικό Υλικό
+            Ψηφιακό Υλικό
           </h1>
           
           <p className="text-base text-gray-600">
-            Περιηγηθείτε στη συλλογή φωτογραφιών από το ιατρείο μας
+            Περιηγηθείτε στο ψηφιακό υλικό από το ιατρείο μας
           </p>
         </motion.div>
       </div>

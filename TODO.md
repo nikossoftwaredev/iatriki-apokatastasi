@@ -1,0 +1,10 @@
+- chnage the hero title to be like the card header of the original site
+- rename gallery to Ψηφιακό Υλικό
+- αλλη φωτογραφια για το γνωριστε τον γιατρο
+- remove contact form compltly when user click κανε ραντεβου show a shadn dialog where you say in a nice way a ui Booking are only availiable trhough phone call and make them very easily click on the button tith thwe phoine icon and the phone to auto clal them
+- add a service called αξιολογιθση και εκτιμιση στασης σωματος
+- write better the wors fgor physio.
+- μελος της https://www.eefiap.gr/
+- μελος της ιταλικης εταιρειας προπθερπαιεας SIMFER
+- add https://www.youtube.com/watch?v=YiP1CatKkWc to videos.
+- add gallery photo category ανατομειο του Graz Austria

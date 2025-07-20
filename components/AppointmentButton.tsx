@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
-import Link from "next/link";
+import { useBooking } from "@/contexts/BookingContext";
 
 interface AppointmentButtonProps {
   size?: "default" | "sm" | "lg" | "icon";
@@ -21,17 +21,22 @@ export default function AppointmentButton({
   children = "Κλείστε Ραντεβού",
   onClick
 }: AppointmentButtonProps) {
+  const { openDialog } = useBooking();
+
+  const handleClick = () => {
+    openDialog();
+    if (onClick) onClick();
+  };
+
   return (
     <Button 
       size={size}
       className={className}
       variant={variant}
-      asChild
+      onClick={handleClick}
     >
-      <Link href="/#appointment" onClick={onClick}>
-        {showIcon && <Calendar className="mr-2 h-4 w-4" />}
-        {children}
-      </Link>
+      {showIcon && <Calendar className="mr-2 h-4 w-4" />}
+      {children}
     </Button>
   );
 }

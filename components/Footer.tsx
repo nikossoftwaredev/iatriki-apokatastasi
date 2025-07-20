@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
-import { FULL_NAME, PHONE, MAIL, ADDRESS, navigation, services, social } from "@/lib/general";
+import { FULL_NAME, PHONE, MAIL, ADDRESS, navigation, social } from "@/lib/general";
+import { services } from "@/lib/services";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -52,10 +53,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Υπηρεσίες</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
+              {services.slice(0, 6).map((service) => (
                 <li key={service.id}>
                   <Link
-                    href={`/services#${service.id}`}
+                    href={`/services/${service.slug}`}
                     className="hover:text-primary transition-colors"
                   >
                     {service.title}

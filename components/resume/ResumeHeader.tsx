@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Mail, Phone } from "lucide-react";
-import { FULL_NAME, ADDRESS, PHONE, PHONE2, credentials } from "@/lib/general";
+import { FULL_NAME, ADDRESS, PHONE, credentials } from "@/lib/general";
 
 export default function ResumeHeader() {
   return (
@@ -55,7 +55,7 @@ export default function ResumeHeader() {
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-semibold">Τηλέφωνο</p>
-                    <p className="text-gray-600">{PHONE}, {PHONE2}</p>
+                    <p className="text-gray-600">{PHONE}</p>
                   </div>
                 </div>
               </div>

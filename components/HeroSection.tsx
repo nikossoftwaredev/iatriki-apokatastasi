@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AppointmentButton from "@/components/AppointmentButton";
-import { Check, Calendar, Users } from "lucide-react";
+import { Check, Calendar, Users, Activity, Heart, Zap } from "lucide-react";
 import Link from "next/link";
 import { getYearsOfExperience, stats, FULL_NAME } from "@/lib/general";
 
@@ -23,15 +23,45 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Ιατρική Αποκατάσταση στην Ηλιούπολη
-              <span className="block text-primary mt-2">Εξειδικευμένη Φροντίδα από τον {FULL_NAME}</span>
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Το ιατρείο μας στην Ηλιούπολη προσφέρει ολοκληρωμένες υπηρεσίες φυσικής ιατρικής 
-              και αποκατάστασης με σύγχρονες θεραπείες όπως προλοθεραπεία (Prolotherapy), 
-              φυσικοθεραπεία, βελονισμός και PRP. Εξειδικευμένη αντιμετώπιση του πόνου 
-              και αποκατάσταση της λειτουργικότητας στην καρδιά της Ηλιούπολης.
+            <div className="mb-8">
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+                ΙΑΤΡΙΚΗ ΑΠΟΚΑΤΑΣΤΑΣΗ
+              </h1>
+              <div className="flex flex-wrap gap-3 lg:gap-4">
+                <motion.span 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-5 py-2.5 rounded-full font-medium flex items-center gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
+                >
+                  <Heart className="h-4 w-4" />
+                  φυσικοθεραπεία
+                </motion.span>
+                <motion.span 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-5 py-2.5 rounded-full font-medium flex items-center gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
+                >
+                  <Zap className="h-4 w-4" />
+                  ιατρείο βελονισμού
+                </motion.span>
+                <motion.span 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-5 py-2.5 rounded-full font-medium flex items-center gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
+                >
+                  <Activity className="h-4 w-4" />
+                  ηλεκτρομυογράφημα
+                </motion.span>
+              </div>
+            </div>
+            <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+              Εμπιστευτείτε την υγεία σας στα έμπειρα χέρια του <span className="font-semibold text-gray-900">{FULL_NAME}</span>. 
+              Με πάνω από <span className="font-semibold text-primary">{getYearsOfExperience()} χρόνια εμπειρίας</span>, προσφέρουμε 
+              εξατομικευμένες λύσεις για την αντιμετώπιση του πόνου και την αποκατάσταση 
+              της λειτουργικότητας σας.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 relative z-20">
               <AppointmentButton size="lg" />

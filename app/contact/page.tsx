@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { ContactSection } from "@/components/sections/Contact";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { FULL_NAME, ADDRESS, PHONE, PHONE2, MAIL, workingHours } from "@/lib/general";
+import { FULL_NAME, ADDRESS, PHONE, MAIL, workingHours } from "@/lib/general";
 
 export const metadata: Metadata = {
   title: `Επικοινωνία - ${FULL_NAME}`,

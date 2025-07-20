@@ -14,6 +14,7 @@ const categories = [
   { id: "clinic", name: "Ιατρείο", color: "bg-green-500" },
   { id: "team", name: "Ομάδα", color: "bg-purple-500" },
   { id: "results", name: "Αποτελέσματα", color: "bg-orange-500" },
+  { id: "graz", name: "Ανατομείο του Graz Austria", color: "bg-red-500" },
 ];
 
 // Gallery images with categories
@@ -101,6 +102,30 @@ const galleryImages = [
     src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/IMG_4227.jpg`,
     alt: "Προλοθεραπεία - Εφαρμογή 14",
     category: "prolotherapy",
+  },
+  {
+    id: 15,
+    src: `https://www.${DOMAIN}/images/graz/anatomy_1.jpg`,
+    alt: "Ανατομείο του Graz - Αίθουσα Διδασκαλίας",
+    category: "graz",
+  },
+  {
+    id: 16,
+    src: `https://www.${DOMAIN}/images/graz/anatomy_2.jpg`,
+    alt: "Ανατομείο του Graz - Εργαστήριο",
+    category: "graz",
+  },
+  {
+    id: 17,
+    src: `https://www.${DOMAIN}/images/graz/anatomy_3.jpg`,
+    alt: "Ανατομείο του Graz - Εκπαιδευτικό Υλικό",
+    category: "graz",
+  },
+  {
+    id: 18,
+    src: `https://www.${DOMAIN}/images/graz/anatomy_4.jpg`,
+    alt: "Ανατομείο του Graz - Κλινική Εκπαίδευση",
+    category: "graz",
   },
 ];
 

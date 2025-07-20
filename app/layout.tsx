@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BUSINESS_NAME, FULL_NAME, PHONE, DOMAIN } from "@/lib/general";
 import Script from "next/script";
+import { BookingProvider } from "@/contexts/BookingContext";
+import GlobalBookingDialog from "@/components/GlobalBookingDialog";
 
 const robotoFont = Roboto({
   weight: ["300", "400", "500", "700", "900"],
@@ -127,11 +129,14 @@ export default function RootLayout({
       <body
         className={`${robotoFont.variable} font-sans antialiased`}
       >
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <BookingProvider>
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+          <GlobalBookingDialog />
+        </BookingProvider>
       </body>
     </html>
   );

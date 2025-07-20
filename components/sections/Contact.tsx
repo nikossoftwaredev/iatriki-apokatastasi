@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CircleIcon } from "@/components/CircleIcon";
-import { Phone, Mail, MapPin, Clock, User, Calendar, MessageSquare, Briefcase } from "lucide-react";
-import { ADDRESS, PHONE, PHONE2, MAIL, workingHours, services, MAP_IFRAME, DOMAIN } from "@/lib/general";
+import { Phone, Mail, MapPin, Clock, CalendarDays } from "lucide-react";
+import { ADDRESS, PHONE, MAIL, workingHours, MAP_IFRAME, DOMAIN } from "@/lib/general";
 import {
   Carousel,
   CarouselContent,
@@ -14,31 +12,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useBooking } from "@/contexts/BookingContext";
 
 export function ContactSection() {
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
-
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setLoading(true);
-    setMessage("");
-
-    const formData = new FormData(event.currentTarget);
-    
-    // Simulate form submission (replace with actual API call)
-    try {
-      // Here you would normally send the form data to your server
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setMessage("Το αίτημά σας ελήφθη επιτυχώς. Θα επικοινωνήσουμε μαζί σας σύντομα.");
-      (event.target as HTMLFormElement).reset();
-    } catch (error) {
-      setMessage("Υπήρξε κάποιο πρόβλημα. Παρακαλώ δοκιμάστε ξανά.");
-    }
-    
-    setLoading(false);
-  }
+  const { openDialog } = useBooking();
 
   return (
     <section id="contact" className="py-16 md:py-24">
@@ -176,128 +153,63 @@ export function ContactSection() {
             </Card>
           </div>
 
-          {/* Appointment Form */}
+          {/* Appointment CTA */}
           <div>
-            <Card id="appointment">
+            <Card id="appointment" className="h-full">
               <CardHeader>
                 <CardTitle>Κλείστε Ραντεβού</CardTitle>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Ονοματεπώνυμο *
-                    </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full pl-10 pr-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                      Τηλέφωνο *
-                    </label>
-                    <div className="relative">
-                      <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        placeholder="69XXXXXXXX"
-                        className="w-full pl-10 pr-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email
-                    </label>
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="w-full pl-10 pr-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium mb-2">
-                      Υπηρεσία *
-                    </label>
-                    <div className="relative">
-                      <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-                      <select
-                        id="service"
-                        name="service"
-                        required
-                        className="w-full pl-10 pr-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent appearance-none"
-                      >
-                        <option value="">Επιλέξτε υπηρεσία</option>
-                        {services.map((service) => (
-                          <option key={service.id} value={service.id}>
-                            {service.title}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="date" className="block text-sm font-medium mb-2">
-                      Προτιμώμενη Ημερομηνία
-                    </label>
-                    <div className="relative">
-                      <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-                      <input
-                        type="date"
-                        id="date"
-                        name="date"
-                        className="w-full pl-10 pr-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Μήνυμα
-                    </label>
-                    <div className="relative">
-                      <MessageSquare className="absolute left-3 top-4 h-5 w-5 text-gray-400" />
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={4}
-                        className="w-full pl-10 pr-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <Button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full bg-primary hover:bg-primary/90"
-                  >
-                    {loading ? "Αποστολή..." : "Αποστολή Αιτήματος"}
-                  </Button>
-
-                  {message && (
-                    <p className={`text-center text-sm ${message.includes("ελήφθη") ? "text-green-600" : "text-red-600"}`}>
-                      {message}
+              <CardContent className="space-y-6">
+                <div className="text-center py-8">
+                  <div className="mb-6">
+                    <CalendarDays className="h-16 w-16 text-primary mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">Προγραμματίστε την Επίσκεψή σας</h3>
+                    <p className="text-gray-600">
+                      Για την καλύτερη εξυπηρέτησή σας, τα ραντεβού κλείνονται τηλεφωνικά
                     </p>
-                  )}
-                </form>
+                  </div>
+                  
+                  <Button
+                    size="lg"
+                    onClick={() => openDialog()}
+                    className="w-full md:w-auto"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Κάντε Ραντεβού
+                  </Button>
+                </div>
+
+                <div className="border-t pt-6">
+                  <h4 className="font-semibold mb-4">Γιατί να μας επιλέξετε</h4>
+                  <ul className="space-y-3 text-sm text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">✓</span>
+                      <span>Άμεση εξυπηρέτηση και ευέλικτο πρόγραμμα ραντεβού</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">✓</span>
+                      <span>Εξατομικευμένη θεραπευτική προσέγγιση</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">✓</span>
+                      <span>Σύγχρονος εξοπλισμός και μέθοδοι θεραπείας</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">✓</span>
+                      <span>Πάνω από 30 χρόνια εμπειρίας</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-muted/50 rounded-lg p-4 text-center">
+                  <p className="text-sm font-medium mb-2">Τηλεφωνήστε μας τώρα</p>
+                  <a 
+                    href={`tel:${PHONE}`}
+                    className="text-xl font-bold text-primary hover:underline"
+                  >
+                    {PHONE}
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </div>
