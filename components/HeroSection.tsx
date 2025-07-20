@@ -11,7 +11,7 @@ export default function HeroSection() {
   const yearsOfExperience = getYearsOfExperience();
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-gray-50 to-white overflow-x-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5 pointer-events-none"></div>
       
@@ -24,40 +24,40 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="mb-8">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
                 ΙΑΤΡΙΚΗ ΑΠΟΚΑΤΑΣΤΑΣΗ
               </h1>
-              <div className="flex flex-wrap gap-3 lg:gap-4">
+              <div className="flex flex-wrap gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start">
                 <motion.span 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-5 py-2.5 rounded-full font-medium flex items-center gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
+                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-medium flex items-center gap-1.5 sm:gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
                 >
-                  <Heart className="h-4 w-4" />
+                  <Heart className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
                   φυσικοθεραπεία
                 </motion.span>
                 <motion.span 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-5 py-2.5 rounded-full font-medium flex items-center gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
+                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-medium flex items-center gap-1.5 sm:gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
                 >
-                  <Zap className="h-4 w-4" />
+                  <Zap className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
                   ιατρείο βελονισμού
                 </motion.span>
                 <motion.span 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-5 py-2.5 rounded-full font-medium flex items-center gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
+                  className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-medium flex items-center gap-1.5 sm:gap-2 hover:from-primary/20 hover:to-primary/10 transition-colors"
                 >
-                  <Activity className="h-4 w-4" />
+                  <Activity className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
                   ηλεκτρομυογράφημα
                 </motion.span>
               </div>
             </div>
-            <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
               Εμπιστευτείτε την υγεία σας στα έμπειρα χέρια του <span className="font-semibold text-gray-900">{FULL_NAME}</span>. 
               Με πάνω από <span className="font-semibold text-primary">{getYearsOfExperience()} χρόνια εμπειρίας</span>, προσφέρουμε 
               εξατομικευμένες λύσεις για την αντιμετώπιση του πόνου και την αποκατάσταση 

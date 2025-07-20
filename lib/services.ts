@@ -111,6 +111,14 @@ export const services: Service[] = [
     shortDescription: "Μη χειρουργική θεραπεία με χρήση των αιμοπεταλίων του ασθενή.",
     iconName: "heart",
     markdownFile: "prp-therapeia.md"
+  },
+  {
+    id: "14",
+    slug: "posture-assessment",
+    title: "Αξιολόγηση και Εκτίμηση Στάσης Σώματος",
+    shortDescription: "Ανάλυση και διόρθωση στάσης σώματος για πρόληψη και θεραπεία μυοσκελετικών προβλημάτων.",
+    iconName: "footprints",
+    markdownFile: "posture-assessment.md"
   }
 ];
 
