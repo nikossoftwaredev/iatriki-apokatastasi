@@ -115,7 +115,7 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 Made by{" "}
                 <a
-                  href="https://github.com/nikos-dimitrakopoulos"
+                  href="https://www.linkedin.com/in/nikosdim97/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"

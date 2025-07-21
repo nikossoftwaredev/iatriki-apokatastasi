@@ -29,7 +29,7 @@ export const testimonials: Testimonial[] = [
     content: "Ως μουσικός, τα χέρια μου είναι το εργαλείο μου. Ο γιατρός κατάλαβε απόλυτα τις ανάγκες μου και με βοήθησε να επιστρέψω στη μουσική χωρίς πόνο. Εξαιρετικός επαγγελματίας με βαθιά γνώση του αντικειμένου του.",
     rating: 5,
     date: "2023-10-20",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/outistas.jpg",
+    imageUrl: "/gallery/testimonials/outistas.jpg",
   },
   {
     id: "3",
@@ -39,7 +39,7 @@ export const testimonials: Testimonial[] = [
     content: "Η ολιστική προσέγγιση του Δρ. Δημητρακόπουλου στην αποκατάσταση είναι αυτό που τον ξεχωρίζει. Δεν αντιμετωπίζει απλά το σύμπτωμα, αλλά τον ολόκληρο άνθρωπο. Η εμπειρία μου ήταν εξαιρετική.",
     rating: 5,
     date: "2023-09-10",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/tsampras.jpg",
+    imageUrl: "/gallery/testimonials/tsampras.jpg",
   },
   {
     id: "4",
@@ -49,7 +49,7 @@ export const testimonials: Testimonial[] = [
     content: "Μετά από χρόνια προβλήματα με τον αυχένα λόγω της δουλειάς μου, η PRP θεραπεία ήταν η λύση. Ο Δρ. Δημητρακόπουλος εξήγησε με υπομονή τη διαδικασία και τα αποτελέσματα ήταν θεαματικά.",
     rating: 5,
     date: "2023-08-25",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/media/tripani.jpg",
+    imageUrl: "/gallery/testimonials/tripani.jpg",
   },
   {
     id: "5",
@@ -59,7 +59,7 @@ export const testimonials: Testimonial[] = [
     content: "Τα χέρια μου είναι η ζωή μου. Ο πόνος στους καρπούς με εμπόδιζε να παίζω. Χάρη στον γιατρό και τη μεσοθεραπεία, επέστρεψα στη σκηνή δυνατότερος από ποτέ. Ευγνώμων για πάντα!",
     rating: 5,
     date: "2023-07-18",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/vasila.jpg",
+    imageUrl: "/gallery/testimonials/vasila.jpg",
   },
   {
     id: "6",
@@ -69,7 +69,7 @@ export const testimonials: Testimonial[] = [
     content: "Ως επαγγελματίας υγείας, εκτιμώ ιδιαίτερα την επιστημονική προσέγγιση και την ενσυνείδητη εφαρμογή του βελονισμού από τον Δρ. Δημητρακόπουλο. Τα αποτελέσματα μιλούν από μόνα τους.",
     rating: 5,
     date: "2023-06-30",
-    imageUrl: "https://www.iatriki-apokatastasi.gr/images/articles/img_4033.jpg",
+    imageUrl: "/gallery/testimonials/img_4033.jpg",
   },
   {
     id: "7",
@@ -79,7 +79,7 @@ export const testimonials: Testimonial[] = [
     content: "Η θεραπεία με κρουστικά κύματα ήταν η λύση στο χρόνιο πρόβλημα του ώμου μου. Μπορώ και πάλι να τραγουδώ χωρίς πόνο. Ο γιατρός είναι πραγματικός δάσκαλος στην τέχνη του!",
     rating: 5,
     date: "2023-05-22",
-    imageUrl: "https://www.iatriki-apokatastasi.gr/images/articles/img_4242.jpg",
+    imageUrl: "/gallery/testimonials/img_4242.jpg",
   },
   {
     id: "8",
@@ -89,7 +89,7 @@ export const testimonials: Testimonial[] = [
     content: "Στα χρόνια μου έχω γνωρίσει πολλούς γιατρούς. Ο Δρ. Δημητρακόπουλος ξεχωρίζει για την αφοσίωση και την αγάπη του στην επιστήμη του. Με βοήθησε να συνεχίσω να κάνω αυτό που αγαπώ.",
     rating: 5,
     date: "2023-04-15",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/1a.jpg",
+    imageUrl: "/gallery/testimonials/1a.jpg",
   },
   {
     id: "9",
@@ -99,7 +99,7 @@ export const testimonials: Testimonial[] = [
     content: "Μετά από σοβαρό τραυματισμό, έκανα αποκατάσταση για 3 χρόνια με τον Δρ. Δημητρακόπουλο. Η υπομονή, η επιμονή και η επιστημονική του γνώση με έφεραν πίσω στη ζωή. Του χρωστάω τα πάντα.",
     rating: 5,
     date: "2023-03-10",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/dosoulas.jpg",
+    imageUrl: "/gallery/testimonials/dosoulas.jpg",
   },
   {
     id: "10",
@@ -109,7 +109,7 @@ export const testimonials: Testimonial[] = [
     content: "Η prolotherapy ήταν η απάντηση στους χρόνιους πόνους των αρθρώσεών μου. Ο Δρ. Δημητρακόπουλος είναι πρωτοπόρος στις νέες θεραπείες και πάντα ενημερωμένος. Συστήνω ανεπιφύλακτα!",
     rating: 5,
     date: "2023-02-28",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/unfffgtitled-1.png",
+    imageUrl: "/gallery/testimonials/unfffgtitled-1.png",
   },
   {
     id: "11",
@@ -119,7 +119,7 @@ export const testimonials: Testimonial[] = [
     content: "Η προσέγγιση του γιατρού είναι μοναδική. Συνδυάζει την επιστήμη με την ανθρώπινη ευαισθησία. Η θεραπεία μου ήταν ολοκληρωμένη και αποτελεσματική. Ευχαριστώ θερμά!",
     rating: 5,
     date: "2023-01-20",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/ungfhhtitled-1.jpg",
+    imageUrl: "/gallery/testimonials/ungfhhtitled-1.jpg",
   },
   {
     id: "12",
@@ -129,7 +129,7 @@ export const testimonials: Testimonial[] = [
     content: "Ως τραγουδίστρια, η φωνή μου είναι το παν. Ο Δρ. Δημητρακόπουλος με βοήθησε να ξεπεράσω προβλήματα που επηρέαζαν την απόδοσή μου. Η εμπειρία και η γνώση του είναι ανεκτίμητες.",
     rating: 5,
     date: "2022-12-15",
-    imageUrl: "http://www.iatriki-apokatastasi.gr/images/articles/martiriess4.jpg",
+    imageUrl: "/gallery/testimonials/martiriess4.jpg",
   },
   {
     id: "13",

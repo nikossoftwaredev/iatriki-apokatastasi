@@ -1,9 +1,9 @@
 export const galleryCategories = [
   { id: "all", name: "Όλες", color: "bg-gray-500" },
+  { id: "clinic", name: "Ο χώρος μας", color: "bg-green-500" },
   { id: "prolotherapy", name: "Προλοθεραπεία", color: "bg-primary" },
   { id: "neural", name: "Νευροθεραπεία", color: "bg-purple-500" },
-  { id: "clinic", name: "Ο χώρος μας", color: "bg-green-500" },
-  { id: "graz", name: "Graz", color: "bg-red-500" },
+  { id: "graz", name: "Aνατομείο Graz", color: "bg-red-500" },
   { id: "videos", name: "Βίντεο", color: "bg-blue-600" },
 ];
 
@@ -91,55 +91,6 @@ export const galleryImages = [
     id: 14,
     src: "/gallery/prolo-therapy/IMG_4227.jpg",
     alt: "Προλοθεραπεία - Εφαρμογή 14",
-    category: "prolotherapy",
-  },
-  // Additional Προλοθεραπεία images from graz subfolder
-  {
-    id: 15,
-    src: "/gallery/prolo-therapy/graz/IMG_5460.JPG",
-    alt: "Προλοθεραπεία - Graz Εφαρμογή 1",
-    category: "prolotherapy",
-  },
-  {
-    id: 16,
-    src: "/gallery/prolo-therapy/graz/anogia_2017_1.jpg",
-    alt: "Προλοθεραπεία - Ανώγεια 2017",
-    category: "prolotherapy",
-  },
-  {
-    id: 17,
-    src: "/gallery/prolo-therapy/graz/img-prp.jpg",
-    alt: "Προλοθεραπεία - PRP",
-    category: "prolotherapy",
-  },
-  {
-    id: 18,
-    src: "/gallery/prolo-therapy/graz/ngra1.jpg",
-    alt: "Προλοθεραπεία - Εφαρμογή ngra 1",
-    category: "prolotherapy",
-  },
-  {
-    id: 19,
-    src: "/gallery/prolo-therapy/graz/ngra2.jpg",
-    alt: "Προλοθεραπεία - Εφαρμογή ngra 2",
-    category: "prolotherapy",
-  },
-  {
-    id: 20,
-    src: "/gallery/prolo-therapy/graz/ngra3.jpg",
-    alt: "Προλοθεραπεία - Εφαρμογή ngra 3",
-    category: "prolotherapy",
-  },
-  {
-    id: 21,
-    src: "/gallery/prolo-therapy/graz/prolo_greek.jpg",
-    alt: "Προλοθεραπεία - Ελληνική Εφαρμογή",
-    category: "prolotherapy",
-  },
-  {
-    id: 22,
-    src: "/gallery/prolo-therapy/graz/wpf.jpg",
-    alt: "Προλοθεραπεία - WPF",
     category: "prolotherapy",
   },
   // Νευροθεραπεία
@@ -312,98 +263,98 @@ export const galleryImages = [
 export const galleryVideos = [
   {
     id: 49,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Η δράση που έχει το Όζον στη οσφυαλγία
+    youtubeId: "YiP1CatKkWc", // Η δράση που έχει το Όζον στη οσφυαλγία
     title: "Η δράση που έχει το Όζον στη οσφυαλγία",
     alt: "Οζονοθεραπεία για οσφυαλγία",
     category: "videos",
   },
   {
     id: 50,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ο ηθοποιός Άκης Σακελλαρίου μιλάει για την προλοθεραπεία
+    youtubeId: "Eqsq918L4KQ", // Ο ηθοποιός Άκης Σακελλαρίου μιλάει για την προλοθεραπεία
     title: "Ο ηθοποιός Άκης Σακελλαρίου μιλάει για την προλοθεραπεία",
     alt: "Άκης Σακελλαρίου - Προλοθεραπεία",
     category: "videos",
   },
   {
     id: 51,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Προλοθεραπεία, τι είναι; εκπομπή στην ΕΡΤ1
+    youtubeId: "sPRxzlfjq4Y", // Προλοθεραπεία, τι είναι; εκπομπή στην ΕΡΤ1
     title: "Προλοθεραπεία, τι είναι; εκπομπή στην ΕΡΤ1",
     alt: "Προλοθεραπεία στην ΕΡΤ1",
     category: "videos",
   },
   {
     id: 52,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Πώς η προλοθεραπεία βοήθησε τον κ. Γιώργο Γεωργίου στην αρθρίτιδα
+    youtubeId: "00Q17A62Se8", // Πώς η προλοθεραπεία βοήθησε τον κ. Γιώργο Γεωργίου στην αρθρίτιδα
     title: "Πώς η προλοθεραπεία βοήθησε τον κ. Γιώργο Γεωργίου στην αρθρίτιδα",
     alt: "Γιώργος Γεωργίου - Αρθρίτιδα",
     category: "videos",
   },
   {
     id: 53,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Οσφυαλγία και προλοθεραπεία
+    youtubeId: "cAZtw-TjJwA", // Οσφυαλγία και προλοθεραπεία
     title: "Οσφυαλγία και προλοθεραπεία",
     alt: "Οσφυαλγία και προλοθεραπεία",
     category: "videos",
   },
   {
     id: 54,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ρήξη συνδέσμων Προλοθεραπεία
+    youtubeId: "IhQVkBxSVzg", // Ρήξη συνδέσμων Προλοθεραπεία
     title: "Ρήξη συνδέσμων Προλοθεραπεία",
     alt: "Ρήξη συνδέσμων - Προλοθεραπεία",
     category: "videos",
   },
   {
     id: 55,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ο Φυσίατρος αθλητής Ανδρέας Παπανδρέου μιλάει για προλοθεραπεία
+    youtubeId: "2Fvvmv5ec5o", // Ο Φυσίατρος αθλητής Ανδρέας Παπανδρέου μιλάει για προλοθεραπεία
     title: "Ο Φυσίατρος αθλητής Ανδρέας Παπανδρέου μιλάει για προλοθεραπεία",
     alt: "Ανδρέας Παπανδρέου - Προλοθεραπεία",
     category: "videos",
   },
   {
     id: 56,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Αστάθεια ώμου και προλοθεραπεία
+    youtubeId: "5Er1w5w_JYg", // Αστάθεια ώμου και προλοθεραπεία
     title: "Αστάθεια ώμου και προλοθεραπεία",
     alt: "Αστάθεια ώμου - Προλοθεραπεία",
     category: "videos",
   },
   {
     id: 57,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Τενοντίτιδα-επικονδυλίτιδα προλοθεραπεία
+    youtubeId: "nx1qsxwbcAk", // Τενοντίτιδα-επικονδυλίτιδα προλοθεραπεία
     title: "Τενοντίτιδα-επικονδυλίτιδα προλοθεραπεία",
     alt: "Τενοντίτιδα και επικονδυλίτιδα",
     category: "videos",
   },
   {
     id: 58,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Εκπομπή στην ΕΡΤ Διεθνούς με θέμα την προλοθεραπεία
+    youtubeId: "1LhuLBGziV4", // Εκπομπή στην ΕΡΤ Διεθνούς με θέμα την προλοθεραπεία
     title: "Εκπομπή στην ΕΡΤ Διεθνούς με θέμα την προλοθεραπεία",
     alt: "ΕΡΤ Διεθνούς - Προλοθεραπεία",
     category: "videos",
   },
   {
     id: 59,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ομιλία δρ. Δημητρακόπουλος 2015
+    youtubeId: "b1zi1AmOLcA", // Ομιλία δρ. Δημητρακόπουλος 2015
     title: "Ομιλία δρ. Δημητρακόπουλος 2015",
     alt: "Ομιλία δρ. Δημητρακόπουλος 2015",
     category: "videos",
   },
   {
     id: 60,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Προλοθεραπεία-Θεραπεία με βλαστοκύτταρα PRP
+    youtubeId: "0Eu493--p3M", // Προλοθεραπεία-Θεραπεία με βλαστοκύτταρα PRP
     title: "Προλοθεραπεία-Θεραπεία με βλαστοκύτταρα PRP",
     alt: "Προλοθεραπεία και PRP",
     category: "videos",
   },
   {
     id: 61,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Πρόλαψη των τραυματισμών Ομιλία 24/11/2015
+    youtubeId: "Wl-6y54xxcs", // Πρόλαψη των τραυματισμών Ομιλία 24/11/2015
     title: "Πρόλαψη των τραυματισμών Ομιλία 24/11/2015",
     alt: "Πρόλαψη τραυματισμών - Ομιλία",
     category: "videos",
   },
   {
     id: 62,
-    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ομιλία - Προλοθεραπεία 9-4-2016 στο ΚΕΚ ΓΣΕΕ
+    youtubeId: "n0xXFYCCytA", // Ομιλία - Προλοθεραπεία 9-4-2016 στο ΚΕΚ ΓΣΕΕ
     title: "Ομιλία - Προλοθεραπεία 9-4-2016 στο ΚΕΚ ΓΣΕΕ",
     alt: "Ομιλία Προλοθεραπεία ΚΕΚ ΓΣΕΕ",
     category: "videos",
@@ -413,7 +364,7 @@ export const galleryVideos = [
 // Combine images and videos into a single array for the gallery
 export const galleryItems = [...galleryImages, ...galleryVideos];
 
-export type GalleryImage = typeof galleryImages[0];
-export type GalleryVideo = typeof galleryVideos[0];
+export type GalleryImage = (typeof galleryImages)[0];
+export type GalleryVideo = (typeof galleryVideos)[0];
 export type GalleryItem = GalleryImage | GalleryVideo;
-export type GalleryCategory = typeof galleryCategories[0];
+export type GalleryCategory = (typeof galleryCategories)[0];
