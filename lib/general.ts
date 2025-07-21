@@ -14,7 +14,7 @@ export const MAP_IFRAME =
 export const NAVIGATION = "https://goo.gl/maps/uiR9Q3m2Ag4M9mKAA";
 
 // Full name with title
-export const FULL_NAME = "Δρ. Σταύρος Ν. Δημητρακόπουλος";
+export const FULL_NAME = "Δρ. Σταύρος Δημητρακόπουλος";
 
 // Calculate years of experience dynamically
 export const getYearsOfExperience = () => {
@@ -25,7 +25,7 @@ export const getYearsOfExperience = () => {
 // Working hours
 export const workingHours = {
   weekdays: "Δευτέρα - Παρασκευή: 10:00 - 13:00 & 17:00 - 21:00",
-  saturday: "Σάββατο - Κυριακή: Κλειστά",
+  saturday: "",
   sunday: "",
   byAppointment: "Κατόπιν ραντεβού",
 };
@@ -60,8 +60,8 @@ export const affiliations = {
   sipro: {
     name: "SIPRO - Società Italiana di Proloterapia",
     url: "https://www.siproaps.it/",
-    description: "Μέλος της Ιταλικής Εταιρείας Προλοθεραπείας"
-  }
+    description: "Μέλος της Ιταλικής Εταιρείας Προλοθεραπείας",
+  },
 };
 
 // Stats labels

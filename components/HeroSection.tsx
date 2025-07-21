@@ -2,6 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import AppointmentButton from "@/components/AppointmentButton";
 import { Check, Calendar, Users, Activity, Heart, Zap } from "lucide-react";
 import Link from "next/link";
@@ -58,10 +64,8 @@ export default function HeroSection() {
               </div>
             </div>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
-              Εμπιστευτείτε την υγεία σας στα έμπειρα χέρια του <span className="font-semibold text-gray-900">{FULL_NAME}</span>. 
-              Με πάνω από <span className="font-semibold text-primary">{getYearsOfExperience()} χρόνια εμπειρίας</span>, προσφέρουμε 
-              εξατομικευμένες λύσεις για την αντιμετώπιση του πόνου και την αποκατάσταση 
-              της λειτουργικότητας σας.
+              <span className="font-semibold text-primary">{getYearsOfExperience()}+ χρόνια εμπειρίας</span> στην αποκατάσταση του πόνου. 
+              Εξατομικευμένες θεραπείες από τον <span className="font-semibold text-gray-900">{FULL_NAME}</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 relative z-20">
               <AppointmentButton size="lg" />
@@ -73,19 +77,56 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Hero Image */}
+          {/* Hero Carousel */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl flex items-center justify-center">
-              <img 
-                src="/images/hero-image.webp" 
-                alt="Ιατρείο Αποκατάστασης Ηλιούπολη - Φυσιατρική"
-                className="rounded-2xl object-cover w-full h-full"
-              />
+            <div className="overflow-hidden rounded-2xl shadow-2xl">
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 4000,
+                    stopOnInteraction: false,
+                    stopOnMouseEnter: true,
+                  }),
+                ]}
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-0">
+                  {[
+                    "/gallery/our-place/1.jpg",
+                    "/gallery/our-place/2.jpg",
+                    "/gallery/our-place/3.jpg",
+                    "/gallery/our-place/4.jpg",
+                    "/gallery/our-place/6.jpg",
+                    "/gallery/our-place/7.jpg",
+                    "/gallery/our-place/8.jpg",
+                    "/gallery/our-place/9.jpg",
+                    "/gallery/our-place/11.jpg",
+                    "/gallery/our-place/12.jpg",
+                    "/gallery/our-place/13.jpg",
+                    "/gallery/our-place/14.jpg",
+                    "/gallery/our-place/15.jpg",
+                  ].map((image, index) => (
+                    <CarouselItem key={index} className="pl-0">
+                      <div className="aspect-[4/3] relative">
+                        <img
+                          src={image}
+                          alt={`Ιατρείο Αποκατάστασης Ηλιούπολη - Εικόνα ${index + 1}`}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
           </motion.div>
         </div>

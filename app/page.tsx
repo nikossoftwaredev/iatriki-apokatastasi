@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
+      <ServicesSection isHomePage={true} />
       <BlogSection />
       <TestimonialsSection />
       <FAQSection />

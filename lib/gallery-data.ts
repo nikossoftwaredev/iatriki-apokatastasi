@@ -4,6 +4,7 @@ export const galleryCategories = [
   { id: "neural", name: "Νευροθεραπεία", color: "bg-purple-500" },
   { id: "clinic", name: "Ο χώρος μας", color: "bg-green-500" },
   { id: "graz", name: "Graz", color: "bg-red-500" },
+  { id: "videos", name: "Βίντεο", color: "bg-blue-600" },
 ];
 
 export const galleryImages = [
@@ -302,5 +303,117 @@ export const galleryImages = [
   },
 ];
 
+// YouTube Videos
+// NOTE: The original video pages on iatriki-apokatastasi.gr no longer contain embedded YouTube videos.
+// Please replace these placeholder IDs with actual YouTube video IDs from your YouTube channel.
+// To get a YouTube video ID:
+// - From URL like https://www.youtube.com/watch?v=ABC123, the ID is ABC123
+// - From URL like https://youtu.be/ABC123, the ID is ABC123
+export const galleryVideos = [
+  {
+    id: 49,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Η δράση που έχει το Όζον στη οσφυαλγία
+    title: "Η δράση που έχει το Όζον στη οσφυαλγία",
+    alt: "Οζονοθεραπεία για οσφυαλγία",
+    category: "videos",
+  },
+  {
+    id: 50,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ο ηθοποιός Άκης Σακελλαρίου μιλάει για την προλοθεραπεία
+    title: "Ο ηθοποιός Άκης Σακελλαρίου μιλάει για την προλοθεραπεία",
+    alt: "Άκης Σακελλαρίου - Προλοθεραπεία",
+    category: "videos",
+  },
+  {
+    id: 51,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Προλοθεραπεία, τι είναι; εκπομπή στην ΕΡΤ1
+    title: "Προλοθεραπεία, τι είναι; εκπομπή στην ΕΡΤ1",
+    alt: "Προλοθεραπεία στην ΕΡΤ1",
+    category: "videos",
+  },
+  {
+    id: 52,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Πώς η προλοθεραπεία βοήθησε τον κ. Γιώργο Γεωργίου στην αρθρίτιδα
+    title: "Πώς η προλοθεραπεία βοήθησε τον κ. Γιώργο Γεωργίου στην αρθρίτιδα",
+    alt: "Γιώργος Γεωργίου - Αρθρίτιδα",
+    category: "videos",
+  },
+  {
+    id: 53,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Οσφυαλγία και προλοθεραπεία
+    title: "Οσφυαλγία και προλοθεραπεία",
+    alt: "Οσφυαλγία και προλοθεραπεία",
+    category: "videos",
+  },
+  {
+    id: 54,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ρήξη συνδέσμων Προλοθεραπεία
+    title: "Ρήξη συνδέσμων Προλοθεραπεία",
+    alt: "Ρήξη συνδέσμων - Προλοθεραπεία",
+    category: "videos",
+  },
+  {
+    id: 55,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ο Φυσίατρος αθλητής Ανδρέας Παπανδρέου μιλάει για προλοθεραπεία
+    title: "Ο Φυσίατρος αθλητής Ανδρέας Παπανδρέου μιλάει για προλοθεραπεία",
+    alt: "Ανδρέας Παπανδρέου - Προλοθεραπεία",
+    category: "videos",
+  },
+  {
+    id: 56,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Αστάθεια ώμου και προλοθεραπεία
+    title: "Αστάθεια ώμου και προλοθεραπεία",
+    alt: "Αστάθεια ώμου - Προλοθεραπεία",
+    category: "videos",
+  },
+  {
+    id: 57,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Τενοντίτιδα-επικονδυλίτιδα προλοθεραπεία
+    title: "Τενοντίτιδα-επικονδυλίτιδα προλοθεραπεία",
+    alt: "Τενοντίτιδα και επικονδυλίτιδα",
+    category: "videos",
+  },
+  {
+    id: 58,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Εκπομπή στην ΕΡΤ Διεθνούς με θέμα την προλοθεραπεία
+    title: "Εκπομπή στην ΕΡΤ Διεθνούς με θέμα την προλοθεραπεία",
+    alt: "ΕΡΤ Διεθνούς - Προλοθεραπεία",
+    category: "videos",
+  },
+  {
+    id: 59,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ομιλία δρ. Δημητρακόπουλος 2015
+    title: "Ομιλία δρ. Δημητρακόπουλος 2015",
+    alt: "Ομιλία δρ. Δημητρακόπουλος 2015",
+    category: "videos",
+  },
+  {
+    id: 60,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Προλοθεραπεία-Θεραπεία με βλαστοκύτταρα PRP
+    title: "Προλοθεραπεία-Θεραπεία με βλαστοκύτταρα PRP",
+    alt: "Προλοθεραπεία και PRP",
+    category: "videos",
+  },
+  {
+    id: 61,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Πρόλαψη των τραυματισμών Ομιλία 24/11/2015
+    title: "Πρόλαψη των τραυματισμών Ομιλία 24/11/2015",
+    alt: "Πρόλαψη τραυματισμών - Ομιλία",
+    category: "videos",
+  },
+  {
+    id: 62,
+    youtubeId: "REPLACE_WITH_VIDEO_ID", // Ομιλία - Προλοθεραπεία 9-4-2016 στο ΚΕΚ ΓΣΕΕ
+    title: "Ομιλία - Προλοθεραπεία 9-4-2016 στο ΚΕΚ ΓΣΕΕ",
+    alt: "Ομιλία Προλοθεραπεία ΚΕΚ ΓΣΕΕ",
+    category: "videos",
+  },
+];
+
+// Combine images and videos into a single array for the gallery
+export const galleryItems = [...galleryImages, ...galleryVideos];
+
 export type GalleryImage = typeof galleryImages[0];
+export type GalleryVideo = typeof galleryVideos[0];
+export type GalleryItem = GalleryImage | GalleryVideo;
 export type GalleryCategory = typeof galleryCategories[0];
