@@ -5,6 +5,7 @@ import EducationSection from "@/components/resume/EducationSection";
 import InternationalTraining from "@/components/resume/InternationalTraining";
 import SpecializedCenters from "@/components/resume/SpecializedCenters";
 import CertificationsSection from "@/components/resume/CertificationsSection";
+import TabbedContent from "@/components/resume/TabbedContent";
 
 export const metadata: Metadata = {
   title: `Βιογραφικό - ${FULL_NAME}`,
@@ -22,6 +23,7 @@ export default function ResumePage() {
           <InternationalTraining />
           <SpecializedCenters />
           <CertificationsSection />
+          <TabbedContent />
         </div>
       </div>
     </div>
