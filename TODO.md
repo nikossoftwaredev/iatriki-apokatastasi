@@ -1,6 +1,4 @@
 - add a service called αξιολογιθση και εκτιμιση στασης σωματος
 - write better the wors fgor physio.
-- μελος της https://www.eefiap.gr/
-- μελος της ιταλικης εταιρειας προπθερπαιεας SIMFER
 - add https://www.youtube.com/watch?v=YiP1CatKkWc to videos.
 - add gallery photo category ανατομειο του Graz Austria

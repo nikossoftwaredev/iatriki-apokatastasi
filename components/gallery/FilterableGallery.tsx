@@ -2,136 +2,14 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { DOMAIN } from "@/lib/general";
+import Image from "next/image";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-// Categories for filtering
-const categories = [
-  { id: "all", name: "Όλες", color: "bg-gray-500" },
-  { id: "prolotherapy", name: "Προλοθεραπεία", color: "bg-primary" },
-  { id: "equipment", name: "Εξοπλισμός", color: "bg-blue-500" },
-  { id: "clinic", name: "Ιατρείο", color: "bg-green-500" },
-  { id: "team", name: "Ομάδα", color: "bg-purple-500" },
-  { id: "results", name: "Αποτελέσματα", color: "bg-orange-500" },
-  { id: "graz", name: "Ανατομείο του Graz Austria", color: "bg-red-500" },
-];
-
-// Gallery images with categories
-const galleryImages = [
-  {
-    id: 1,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/10.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 1",
-    category: "prolotherapy",
-  },
-  {
-    id: 2,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/11.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 2",
-    category: "prolotherapy",
-  },
-  {
-    id: 3,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/12.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 3",
-    category: "prolotherapy",
-  },
-  {
-    id: 4,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/13.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 4",
-    category: "prolotherapy",
-  },
-  {
-    id: 5,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/15.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 5",
-    category: "prolotherapy",
-  },
-  {
-    id: 6,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/18.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 6",
-    category: "prolotherapy",
-  },
-  {
-    id: 7,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/2.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 7",
-    category: "prolotherapy",
-  },
-  {
-    id: 8,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/3.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 8",
-    category: "prolotherapy",
-  },
-  {
-    id: 9,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/8.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 9",
-    category: "prolotherapy",
-  },
-  {
-    id: 10,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/IMG-20160802-WA0005.JPG`,
-    alt: "Προλοθεραπεία - Εφαρμογή 10",
-    category: "prolotherapy",
-  },
-  {
-    id: 11,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/IMG_4222.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 11",
-    category: "prolotherapy",
-  },
-  {
-    id: 12,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/IMG_4223.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 12",
-    category: "prolotherapy",
-  },
-  {
-    id: 13,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/IMG_4224.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 13",
-    category: "prolotherapy",
-  },
-  {
-    id: 14,
-    src: `https://www.${DOMAIN}/images/articles/gal_prolotherapeia/IMG_4227.jpg`,
-    alt: "Προλοθεραπεία - Εφαρμογή 14",
-    category: "prolotherapy",
-  },
-  {
-    id: 15,
-    src: `https://www.${DOMAIN}/images/graz/anatomy_1.jpg`,
-    alt: "Ανατομείο του Graz - Αίθουσα Διδασκαλίας",
-    category: "graz",
-  },
-  {
-    id: 16,
-    src: `https://www.${DOMAIN}/images/graz/anatomy_2.jpg`,
-    alt: "Ανατομείο του Graz - Εργαστήριο",
-    category: "graz",
-  },
-  {
-    id: 17,
-    src: `https://www.${DOMAIN}/images/graz/anatomy_3.jpg`,
-    alt: "Ανατομείο του Graz - Εκπαιδευτικό Υλικό",
-    category: "graz",
-  },
-  {
-    id: 18,
-    src: `https://www.${DOMAIN}/images/graz/anatomy_4.jpg`,
-    alt: "Ανατομείο του Graz - Κλινική Εκπαίδευση",
-    category: "graz",
-  },
-];
+import { galleryCategories, galleryImages, type GalleryImage } from "@/lib/gallery-data";
 
 export default function FilterableGallery() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   const filteredImages = selectedCategory === "all" 
     ? galleryImages 
@@ -148,7 +26,7 @@ export default function FilterableGallery() {
           
           {/* Category Pills */}
           <div className="flex flex-wrap justify-center gap-2 mb-6">
-            {categories.map((category) => (
+            {galleryCategories.map((category) => (
               <Button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -189,10 +67,13 @@ export default function FilterableGallery() {
                 className="relative aspect-square cursor-pointer overflow-hidden rounded-lg group"
                 onClick={() => setSelectedImage(image)}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
+                  width={300}
+                  height={300}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  quality={75}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
               </motion.div>
@@ -231,10 +112,13 @@ export default function FilterableGallery() {
               >
                 <X className="h-8 w-8" />
               </button>
-              <img
+              <Image
                 src={selectedImage.src}
                 alt={selectedImage.alt}
+                width={1200}
+                height={800}
                 className="w-full h-full object-contain rounded-lg"
+                quality={90}
               />
               <p className="text-white text-center mt-4">{selectedImage.alt}</p>
             </motion.div>

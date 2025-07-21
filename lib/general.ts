@@ -55,6 +55,15 @@ export const credentials = [
   "Μέλος της Ιταλικής Εταιρείας προλοθεραπείας (SIPRO)",
 ];
 
+// Professional associations and affiliations
+export const affiliations = {
+  sipro: {
+    name: "SIPRO - Società Italiana di Proloterapia",
+    url: "https://www.siproaps.it/",
+    description: "Μέλος της Ιταλικής Εταιρείας Προλοθεραπείας"
+  }
+};
+
 // Stats labels
 export const stats = {
   satisfiedClients: "10,000+",

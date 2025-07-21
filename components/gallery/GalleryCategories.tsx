@@ -4,22 +4,21 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { 
   Stethoscope, 
-  Activity, 
-  Users, 
   Building,
   Award,
-  Camera
+  Camera,
+  Zap
 } from "lucide-react";
 import Link from "next/link";
 
 const categories = [
   {
     id: 1,
-    title: "Ιατρείο & Εξοπλισμός",
-    description: "Φωτογραφίες από τους χώρους του ιατρείου και τον σύγχρονο ιατρικό εξοπλισμό",
+    title: "Ιατρείο",
+    description: "Φωτογραφίες από τους χώρους του ιατρείου μας",
     icon: Building,
-    imageCount: 15,
-    href: "#",
+    imageCount: 14,
+    href: "/gallery/iatreio",
     color: "bg-blue-500",
   },
   {
@@ -28,43 +27,34 @@ const categories = [
     description: "Εφαρμογές προλοθεραπείας, PRP και άλλων θεραπειών",
     icon: Stethoscope,
     imageCount: 25,
-    href: "#",
+    href: "/gallery/therapies",
     color: "bg-primary",
   },
   {
     id: 3,
-    title: "Συνέδρια & Εκπαίδευση",
-    description: "Συμμετοχές σε διεθνή συνέδρια και εκπαιδευτικά σεμινάρια",
-    icon: Award,
-    imageCount: 18,
-    href: "#",
+    title: "Neural Therapy",
+    description: "Εφαρμογές και τεχνικές της Neural Therapy",
+    icon: Zap,
+    imageCount: 3,
+    href: "/gallery/neural-therapy",
     color: "bg-purple-500",
   },
   {
     id: 4,
-    title: "Ομάδα Αποκατάστασης",
-    description: "Η διεπιστημονική ομάδα του ιατρείου σε δράση",
-    icon: Users,
-    imageCount: 12,
-    href: "#",
+    title: "Συνέδρια & Εκπαίδευση",
+    description: "Συμμετοχές σε διεθνή συνέδρια και εκπαιδευτικά σεμινάρια",
+    icon: Award,
+    imageCount: 18,
+    href: "/gallery/conferences",
     color: "bg-green-500",
   },
   {
     id: 5,
-    title: "Πριν & Μετά",
-    description: "Αποτελέσματα θεραπειών και η πρόοδος των ασθενών",
-    icon: Activity,
-    imageCount: 20,
-    href: "#",
-    color: "bg-orange-500",
-  },
-  {
-    id: 6,
     title: "Άλλες Φωτογραφίες",
     description: "Διάφορες φωτογραφίες από την καθημερινότητα του ιατρείου",
     icon: Camera,
     imageCount: 10,
-    href: "#",
+    href: "/gallery/other",
     color: "bg-pink-500",
   },
 ];

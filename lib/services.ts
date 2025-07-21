@@ -69,7 +69,7 @@ export const services: Service[] = [
     slug: "ozonotherapeia",
     title: "Οξυγόνο-οζονοθεραπεία",
     shortDescription: "Διέγερση του ανοσοποιητικού συστήματος και των μηχανισμών ίασης.",
-    iconName: "wind",
+    iconName: "atom",
     markdownFile: "ozonotherapeia.md"
   },
   {
