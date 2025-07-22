@@ -28,6 +28,7 @@ export const services: Service[] = [
     shortDescription:
       "Ιατρικός βελονισμός, ηλεκτροβελονισμός για μυοσκελετικά σύνδρομα και νευρολογικές παθήσεις.",
     iconName: "hand",
+    iconColor: "#10b981", // Emerald green - healing/therapy
     markdownFile: "fysiotherapeia.md",
     category: "diagnostic-support",
   },
@@ -38,6 +39,7 @@ export const services: Service[] = [
     shortDescription:
       "Μη χειρουργική θεραπεία με χρήση των αιμοπεταλίων του ασθενή.",
     iconName: "heart",
+    iconColor: "#ef4444", // Red - blood/cardiovascular
     markdownFile: "prp-therapeia.md",
     category: "therapeutic",
   },
@@ -48,6 +50,7 @@ export const services: Service[] = [
     shortDescription:
       "Θεραπευτικές εγχύσεις για σπαστικότητα και νευρολογικές διαταραχές.",
     iconName: "syringe",
+    iconColor: "#8b5cf6", // Purple - pharmaceutical/injection
     markdownFile: "botox-dysport.md",
     category: "therapeutic",
   },
@@ -58,6 +61,7 @@ export const services: Service[] = [
     shortDescription:
       "Διέγερση του ανοσοποιητικού συστήματος και των μηχανισμών ίασης.",
     iconName: "atom",
+    iconColor: "#06b6d4", // Cyan - oxygen/air
     markdownFile: "ozonotherapeia.md",
     category: "therapeutic",
   },
@@ -68,6 +72,7 @@ export const services: Service[] = [
     shortDescription:
       "Αντιμετώπιση αθλητικών κακώσεων, καταγμάτων, μυοσκελετικών, νευρολογικών και ρευματολογικών προβλημάτων.",
     iconName: "stethoscope",
+    iconColor: "#0ea5e9", // Sky blue - medical diagnosis
     markdownFile: "diagnosi-apokatastasi.md",
     category: "diagnostic-support",
   },
@@ -78,6 +83,7 @@ export const services: Service[] = [
     shortDescription:
       "Ακριβής διάγνωση αυχενικού συνδρόμου, οσφυαλγίας και ισχιαλγίας.",
     iconName: "activity",
+    iconColor: "#f59e0b", // Amber - electrical activity
     markdownFile: "ilektromyografima.md",
     category: "diagnostic-support",
   },
@@ -88,6 +94,7 @@ export const services: Service[] = [
     shortDescription:
       "Εξειδικευμένα θεραπευτικά πρωτόκολλα για την αποκατάσταση.",
     iconName: "dumbbell",
+    iconColor: "#22c55e", // Green - physical exercise/health
     markdownFile: "therapeftiki-gymnastiki.md",
     category: "diagnostic-support",
   },
@@ -98,6 +105,7 @@ export const services: Service[] = [
     shortDescription:
       "Θεραπεία τενοντίτιδων, μυϊκών πόνων, επικονδυλίτιδας και περιαρθρίτιδας.",
     iconName: "waves",
+    iconColor: "#3b82f6", // Blue - wave therapy
     markdownFile: "shock-wave.md",
     category: "diagnostic-support",
   },
@@ -108,6 +116,7 @@ export const services: Service[] = [
     shortDescription:
       "Αντιμετώπιση οξέων και χρόνιων πόνων και λειτουργικών διαταραχών.",
     iconName: "brain",
+    iconColor: "#ec4899", // Pink - neural/brain therapy
     markdownFile: "neuraltherapy.md",
     category: "therapeutic",
   },
@@ -118,6 +127,7 @@ export const services: Service[] = [
     shortDescription:
       "Μικροεγχύσεις βιταμινών και υαλουρονικού οξέος για αναζωογόνηση.",
     iconName: "droplet",
+    iconColor: "#14b8a6", // Teal - fluid/injection therapy
     markdownFile: "mesotherapeia.md",
     category: "therapeutic",
   },
@@ -128,6 +138,7 @@ export const services: Service[] = [
     shortDescription:
       "Για μεταταρσαλγία, άκανθα πτέρνας και παραμορφώσεις ποδιών.",
     iconName: "footprints",
+    iconColor: "#a855f7", // Purple - foot orthotics
     markdownFile: "orthotika-pelmata.md",
     category: "diagnostic-support",
   },
@@ -138,6 +149,7 @@ export const services: Service[] = [
     shortDescription:
       "Εναλλακτική θεραπεία βασισμένη στη συχνότητα του σώματος.",
     iconName: "radio",
+    iconColor: "#6366f1", // Indigo - bioresonance/frequency
     markdownFile: "biosyntonismos.md",
     category: "diagnostic-support",
   },
@@ -148,6 +160,7 @@ export const services: Service[] = [
     shortDescription:
       "Ανάλυση και διόρθωση στάσης σώματος για πρόληψη και θεραπεία μυοσκελετικών προβλημάτων.",
     iconName: "footprints",
+    iconColor: "#e11d48", // Rose - posture assessment
     markdownFile: "posture-assessment.md",
     category: "diagnostic-support",
   },
@@ -158,6 +171,7 @@ export const services: Service[] = [
     shortDescription:
       "Παραδοσιακή κινεζική θεραπευτική μέθοδος για αντιμετώπιση πόνου και αποκατάσταση της ισορροπίας του οργανισμού.",
     iconName: "activity",
+    iconColor: "#84cc16", // Lime - acupuncture/traditional medicine
     markdownFile: "iatrikos-velonismos.md",
     category: "therapeutic",
   },

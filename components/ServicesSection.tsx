@@ -74,6 +74,7 @@ export default function ServicesSection({ isHomePage = false }: ServicesSectionP
               title={service.title}
               shortDescription={service.shortDescription}
               icon={iconMap[service.iconName] || <Heart className="h-6 w-6" />}
+              color={service.iconColor}
               index={index}
             />
           ))}

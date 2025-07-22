@@ -97,7 +97,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <div className="mb-8">
           <div className="mb-4">
             <CircleIcon 
-              color="#06b6d4" 
+              color={service.iconColor} 
               icon={iconMap[service.iconName] || <Heart className="h-8 w-8" />}
               size={80}
             />

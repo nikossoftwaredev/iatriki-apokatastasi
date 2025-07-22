@@ -12,6 +12,7 @@ interface ServiceCardProps {
   title: string;
   shortDescription: string;
   icon: React.ReactNode;
+  color: string;
   index?: number;
 }
 
@@ -21,6 +22,7 @@ export default function ServiceCard({
   title, 
   shortDescription, 
   icon,
+  color,
   index = 0 
 }: ServiceCardProps) {
   return (
@@ -41,7 +43,7 @@ export default function ServiceCard({
         )}>
           <div className="mb-4">
             <CircleIcon 
-              color="#06b6d4" 
+              color={color} 
               icon={icon}
               size={56}
             />

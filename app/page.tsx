@@ -22,8 +22,8 @@ export default function Home() {
       <BlogSection />
       <TestimonialsSection />
       <FeaturedVideoSection />
-      <FAQSection />
       <ContactSection />
+      <FAQSection />
     </>
   );
 }

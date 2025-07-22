@@ -195,9 +195,15 @@ export default function HeroSection() {
                         <Link key={service.id} href={`/services/${service.slug}`}>
                           <Badge 
                             variant="outline" 
-                            className="px-3 py-2 text-sm cursor-pointer hover:bg-primary hover:text-white hover:scale-105 transition-all duration-200"
+                            className="px-3 py-2 text-sm cursor-pointer hover:bg-primary hover:text-white hover:scale-105 transition-all duration-200 flex items-center"
                           >
-                            <Icon className="h-3.5 w-3.5 mr-1.5" />
+                            <div className="mr-1.5">
+                              <CircleIcon 
+                                color={service.iconColor}
+                                icon={<Icon className="h-2.5 w-2.5" />}
+                                size={20}
+                              />
+                            </div>
                             {service.title}
                           </Badge>
                         </Link>
@@ -218,9 +224,15 @@ export default function HeroSection() {
                         <Link key={service.id} href={`/services/${service.slug}`}>
                           <Badge 
                             variant="outline" 
-                            className="px-3 py-2 text-sm cursor-pointer hover:bg-primary hover:text-white hover:scale-105 transition-all duration-200"
+                            className="px-3 py-2 text-sm cursor-pointer hover:bg-primary hover:text-white hover:scale-105 transition-all duration-200 flex items-center"
                           >
-                            <Icon className="h-3.5 w-3.5 mr-1.5" />
+                            <div className="mr-1.5">
+                              <CircleIcon 
+                                color={service.iconColor}
+                                icon={<Icon className="h-2.5 w-2.5" />}
+                                size={20}
+                              />
+                            </div>
                             {service.title}
                           </Badge>
                         </Link>
