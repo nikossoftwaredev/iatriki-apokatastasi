@@ -64,9 +64,9 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
           className="bg-white rounded-xl shadow-lg p-6 mb-6"
         >
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
             {/* Doctor Image */}
-            <div className="w-36 h-48 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg overflow-hidden p-2 flex-shrink-0">
+            <div className="w-32 h-40 sm:w-36 sm:h-48 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg overflow-hidden p-2 flex-shrink-0">
               <div className="relative w-full h-full bg-white rounded overflow-hidden shadow-inner">
                 <img 
                   src="/images/doctor.jpg" 
@@ -77,23 +77,23 @@ export default function HeroSection() {
             </div>
             
             {/* Doctor Info and Stats */}
-            <div className="flex-1">
+            <div className="flex-1 text-center sm:text-left">
               <div>
-                <h1 className="text-2xl font-bold text-primary mb-2">
+                <h1 className="text-xl sm:text-2xl font-bold text-primary mb-2">
                   Δρ. ΣΤΑΥΡΟΣ Ν. ΔΗΜΗΤΡΑΚΟΠΟΥΛΟΣ
                 </h1>
-                <p className="text-base text-gray-700 mb-1">
+                <p className="text-sm sm:text-base text-gray-700 mb-1">
                   Ιατρός Αποκατάστασης - Φυσίατρος
                 </p>
-                <p className="text-sm text-gray-600 mb-1">
+                <p className="text-xs sm:text-sm text-gray-600 mb-1">
                   Μετεκπαιδευθείς στην Παιδική Κλινική του Milan
                 </p>
-                <p className="text-sm text-gray-600 mb-3">
+                <p className="text-xs sm:text-sm text-gray-600 mb-3">
                   Διπλωματούχος βελονισμού E.C.P.D (ΟΗΕ)
                 </p>
-                <div className="bg-primary/5 rounded-lg px-4 py-2 inline-block">
-                  <span className="text-lg font-semibold text-primary">{getYearsOfExperience()}+ χρόνια εμπειρίας</span>
-                  <span className="text-base text-gray-600 ml-2">στην αποκατάσταση του πόνου</span>
+                <div className="bg-primary/5 rounded-lg px-3 sm:px-4 py-2 inline-block">
+                  <span className="text-base sm:text-lg font-semibold text-primary">{getYearsOfExperience()}+ χρόνια εμπειρίας</span>
+                  <span className="text-sm sm:text-base text-gray-600 ml-1 sm:ml-2">στην αποκατάσταση του πόνου</span>
                 </div>
               </div>
             </div>

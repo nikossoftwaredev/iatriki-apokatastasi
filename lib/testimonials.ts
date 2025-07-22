@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
     name: "Χάϊκ Γιαζιτζιάν",
     profession: "Συνθέτης και δεξιοτέχνης του ούτι",
     treatment: "Φυσικοθεραπεία",
-    content: "Με τον μεγάλο συνθέτη και δεξιοτέχνη του ούτι Χάϊκ Γιαζιτζιάν",
+    content: "Εξαιρετική εμπειρία με ολοκληρωμένη φυσικοθεραπευτική αντιμετώπιση",
     rating: 5,
     date: "2023-10-20",
     imageUrl: "/gallery/testimonials/outistas.jpg",

@@ -41,7 +41,7 @@ export default function TestimonialCard({
     >
       {/* Full image or video at top */}
       {videoUrl ? (
-        <div className="relative w-full h-48 overflow-hidden bg-black">
+        <div className="relative w-full h-64 overflow-hidden bg-black">
           <iframe
             src={`https://www.youtube.com/embed/${videoUrl}?rel=0`}
             title={`${name} testimonial video`}
@@ -52,7 +52,7 @@ export default function TestimonialCard({
         </div>
       ) : imageUrl ? (
         <div 
-          className="relative w-full h-48 overflow-hidden cursor-pointer group"
+          className="relative w-full h-64 overflow-hidden cursor-pointer group"
           onClick={() => setShowModal(true)}
         >
           <img
@@ -64,18 +64,18 @@ export default function TestimonialCard({
         </div>
       ) : null}
 
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-4 flex flex-col flex-grow">
         {/* Content */}
-        <p className="text-gray-700 mb-6 flex-grow italic">
+        <p className="text-gray-700 mb-3 flex-grow italic text-sm">
           &ldquo;{content}&rdquo;
         </p>
 
         {/* Rating */}
-        <div className="flex items-center mb-4">
+        <div className="flex items-center mb-3">
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className={`h-5 w-5 ${
+              className={`h-4 w-4 ${
                 i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
               }`}
             />
@@ -83,13 +83,13 @@ export default function TestimonialCard({
         </div>
 
         {/* Author info */}
-        <div className="border-t pt-4">
+        <div className="border-t pt-3">
           <div>
-            <p className="font-semibold text-gray-900">{name}</p>
+            <p className="font-semibold text-gray-900 text-sm">{name}</p>
             {profession && (
-              <p className="text-sm text-gray-500">{profession}</p>
+              <p className="text-xs text-gray-500">{profession}</p>
             )}
-            <p className="text-sm text-gray-600">{treatment}</p>
+            <p className="text-xs text-gray-600">{treatment}</p>
           </div>
         </div>
       </div>
