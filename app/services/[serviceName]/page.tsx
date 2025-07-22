@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { CircleIcon } from '@/components/CircleIcon';
 import { PHONE } from '@/lib/general';
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { 
   Stethoscope, 
   Activity, 
@@ -50,42 +52,7 @@ async function getServiceContent(markdownFile: string): Promise<string | null> {
   try {
     const filePath = path.join(process.cwd(), 'app/services/markdown', markdownFile);
     const content = await fs.readFile(filePath, 'utf-8');
-    
-    // Convert markdown to HTML (basic conversion for now)
-    const htmlContent = content
-      .split('\n\n')
-      .map(paragraph => {
-        // Headers
-        if (paragraph.startsWith('### ')) {
-          return `<h3 class="text-xl font-semibold mt-6 mb-3">${paragraph.substring(4)}</h3>`;
-        }
-        if (paragraph.startsWith('## ')) {
-          return `<h2 class="text-2xl font-bold mt-8 mb-4">${paragraph.substring(3)}</h2>`;
-        }
-        if (paragraph.startsWith('# ')) {
-          return `<h1 class="text-3xl font-bold mb-6">${paragraph.substring(2)}</h1>`;
-        }
-        
-        // Lists
-        if (paragraph.startsWith('- ')) {
-          const items = paragraph.split('\n').map(item => 
-            `<li class="ml-4">${item.substring(2)}</li>`
-          ).join('');
-          return `<ul class="list-disc list-inside mb-4 space-y-1">${items}</ul>`;
-        }
-        
-        // Bold text
-        paragraph = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        
-        // Check marks
-        paragraph = paragraph.replace(/✓/g, '<span class="text-green-600">✓</span>');
-        
-        // Regular paragraphs
-        return `<p class="mb-4 leading-relaxed">${paragraph}</p>`;
-      })
-      .join('\n');
-    
-    return htmlContent;
+    return content;
   } catch (error) {
     console.error('Error reading markdown file:', error);
     return null;
@@ -140,8 +107,38 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
 
         {markdownContent ? (
-          <div className="prose prose-lg max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: markdownContent }} />
+          <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-strong:text-gray-900 prose-ul:text-gray-600 prose-table:overflow-hidden">
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              components={{
+                img: ({ node, ...props }) => (
+                  <img
+                    {...props}
+                    className="rounded-lg shadow-lg mx-auto"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                  />
+                ),
+                table: ({ node, ...props }) => (
+                  <div className="overflow-x-auto my-6">
+                    <table className="min-w-full divide-y divide-gray-200" {...props} />
+                  </div>
+                ),
+                thead: ({ node, ...props }) => (
+                  <thead className="bg-gray-50" {...props} />
+                ),
+                th: ({ node, ...props }) => (
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" {...props} />
+                ),
+                td: ({ node, ...props }) => (
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900" {...props} />
+                ),
+                tr: ({ node, ...props }) => (
+                  <tr className="hover:bg-gray-50" {...props} />
+                ),
+              }}
+            >
+              {markdownContent}
+            </ReactMarkdown>
           </div>
         ) : (
           <div className="bg-muted rounded-lg p-8">

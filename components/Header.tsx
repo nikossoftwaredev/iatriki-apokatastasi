@@ -31,7 +31,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
               // Determine if this should be a scroll link or navigation
-              const isScrollLink = item.href === "/services" || item.href === "/contact";
+              const isScrollLink = item.href === "/contact";
               const href = isScrollLink ? `/#${item.href.replace("/", "")}` : item.href;
               
               return (
@@ -64,7 +64,7 @@ export default function Header() {
               </SheetHeader>
               <nav className="flex flex-col space-y-2">
                 {navigation.map((item) => {
-                  const isScrollLink = item.href === "/services" || item.href === "/contact";
+                  const isScrollLink = item.href === "/contact";
                   const href = isScrollLink ? `/#${item.href.replace("/", "")}` : item.href;
                   
                   return (

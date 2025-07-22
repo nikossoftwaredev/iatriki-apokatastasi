@@ -25,11 +25,7 @@ export default function TestimonialsSection() {
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Μαρτυρίες Ασθενών
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Διαβάστε τις εμπειρίες ασθενών που εμπιστεύτηκαν την υγεία τους 
-            στα χέρια μας και βελτίωσαν την ποιότητα ζωής τους.
-          </p>
+          </h2>         
         </motion.div>
 
         <Carousel
