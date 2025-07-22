@@ -3,41 +3,51 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import AppointmentButton from "@/components/AppointmentButton";
-import { Calendar, Users, Check, GraduationCap, Award, Activity } from "lucide-react";
+import { Users, GraduationCap, Award, Activity } from "lucide-react";
 import Link from "next/link";
 import { 
-  getYearsOfExperience, 
-  stats, 
   FULL_NAME,
-  credentials 
+  credentials,
+  getYearsOfExperience 
 } from "@/lib/general";
 import { 
-  services, 
   getServicesByCategory, 
   serviceCategories 
 } from "@/lib/services";
 import { CircleIcon } from "@/components/CircleIcon";
+import {
+  Bone,
+  Hand,
+  Heart,
+  Syringe,
+  Atom,
+  Stethoscope,
+  Dumbbell,
+  Waves,
+  Brain,
+  Droplet,
+  Footprints,
+  Radio
+} from "lucide-react";
 
 // Service icon mapping
 const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
-  bone: require("lucide-react").Bone,
-  hand: require("lucide-react").Hand,
-  heart: require("lucide-react").Heart,
-  syringe: require("lucide-react").Syringe,
-  atom: require("lucide-react").Atom,
-  stethoscope: require("lucide-react").Stethoscope,
-  activity: require("lucide-react").Activity,
-  dumbbell: require("lucide-react").Dumbbell,
-  waves: require("lucide-react").Waves,
-  brain: require("lucide-react").Brain,
-  droplet: require("lucide-react").Droplet,
-  footprints: require("lucide-react").Footprints,
-  radio: require("lucide-react").Radio,
+  bone: Bone,
+  hand: Hand,
+  heart: Heart,
+  syringe: Syringe,
+  atom: Atom,
+  stethoscope: Stethoscope,
+  activity: Activity,
+  dumbbell: Dumbbell,
+  waves: Waves,
+  brain: Brain,
+  droplet: Droplet,
+  footprints: Footprints,
+  radio: Radio,
 };
 
 export default function HeroSection() {
-  const yearsOfExperience = getYearsOfExperience();
   const therapeuticServices = getServicesByCategory("therapeutic");
   const diagnosticServices = getServicesByCategory("diagnostic-support");
 
