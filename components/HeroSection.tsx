@@ -83,13 +83,22 @@ export default function HeroSection() {
                   Δρ. ΣΤΑΥΡΟΣ Ν. ΔΗΜΗΤΡΑΚΟΠΟΥΛΟΣ
                 </h1>
                 <p className="text-sm sm:text-base text-gray-700 mb-1">
-                  Ιατρός Αποκατάστασης - Φυσίατρος
+                  Ιατρός Αποκατάστασης - <Link href="/blogs/what-is-a-physiatrist" className="text-primary underline hover:text-primary/80 transition-colors">Φυσίατρος</Link>
                 </p>
                 <p className="text-xs sm:text-sm text-gray-600 mb-1">
-                  Μετεκπαιδευθείς στην Παιδική Κλινική του Milan
+                  Μετεκπαιδευθείς στην Πανεπιστημιακή Κλινική Του Μιλάνου
+                </p>
+                <p className="text-xs sm:text-sm text-gray-600 mb-1">
+                  Fellow of the European Board of PRM
+                </p>
+                <p className="text-xs sm:text-sm text-gray-600 mb-1">
+                  Διπλωματούχος Βελονισμού E.C.P.D (ΟΗΕ)
+                </p>
+                <p className="text-xs sm:text-sm text-gray-600 mb-1">
+                  Μέλος της Αθλητιατρικής Εταιρείας Ελλάδος
                 </p>
                 <p className="text-xs sm:text-sm text-gray-600 mb-3">
-                  Διπλωματούχος βελονισμού E.C.P.D (ΟΗΕ)
+                  Μέλος της Ευρωπαϊκής εταιρείας της προλοθεραπείας (ESP)
                 </p>
                 <div className="bg-primary/5 rounded-lg px-3 sm:px-4 py-2 inline-block">
                   <span className="text-base sm:text-lg font-semibold text-primary">{getYearsOfExperience()}+ χρόνια εμπειρίας</span>

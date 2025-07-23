@@ -23,8 +23,11 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo/Name */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-3">
             <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
+            <span className="text-primary font-medium tracking-wider" style={{ fontSize: '0.875rem', letterSpacing: '0.05em' }}>
+              ΙΑΤΡΙΚΗ ΑΠΟΚΑΤΑΣΤΑΣΗ
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

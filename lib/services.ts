@@ -77,17 +77,6 @@ export const services: Service[] = [
     category: "diagnostic-support",
   },
   {
-    id: "4",
-    slug: "ilektromyografima",
-    title: "Ηλεκτρομυογράφημα",
-    shortDescription:
-      "Ακριβής διάγνωση αυχενικού συνδρόμου, οσφυαλγίας και ισχιαλγίας.",
-    iconName: "activity",
-    iconColor: "#f59e0b", // Amber - electrical activity
-    markdownFile: "ilektromyografima.md",
-    category: "diagnostic-support",
-  },
-  {
     id: "6",
     slug: "therapeftiki-gymnastiki",
     title: "Ειδική θεραπευτική γυμναστική",
@@ -140,17 +129,6 @@ export const services: Service[] = [
     iconName: "footprints",
     iconColor: "#a855f7", // Purple - foot orthotics
     markdownFile: "orthotika-pelmata.md",
-    category: "diagnostic-support",
-  },
-  {
-    id: "12",
-    slug: "biosyntonismos",
-    title: "Βιοσυντονισμός",
-    shortDescription:
-      "Εναλλακτική θεραπεία βασισμένη στη συχνότητα του σώματος.",
-    iconName: "radio",
-    iconColor: "#6366f1", // Indigo - bioresonance/frequency
-    markdownFile: "biosyntonismos.md",
     category: "diagnostic-support",
   },
   {
