@@ -48,11 +48,7 @@ export default function TestimonialsSection() {
                 className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
               >
                 <TestimonialCard
-                  name={testimonial.name}
-                  profession={testimonial.profession}
-                  treatment={testimonial.treatment}
                   content={testimonial.content}
-                  rating={testimonial.rating}
                   date={testimonial.date}
                   imageUrl={testimonial.imageUrl}
                   videoUrl={testimonial.videoUrl}

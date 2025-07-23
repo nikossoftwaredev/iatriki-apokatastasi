@@ -158,17 +158,20 @@ export default function FilterableGallery() {
                 </div>
               ) : (
                 // Image
-                <>
-                  <Image
-                    src={selectedItem.src}
-                    alt={selectedItem.alt}
-                    width={1200}
-                    height={800}
-                    className="w-full h-full object-contain rounded-lg"
-                    quality={90}
-                  />
+                <div className="relative flex flex-col items-center">
+                  <div className="relative max-h-[80vh] w-full flex items-center justify-center">
+                    <Image
+                      src={selectedItem.src}
+                      alt={selectedItem.alt}
+                      width={1200}
+                      height={800}
+                      className="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-lg"
+                      quality={90}
+                      priority
+                    />
+                  </div>
                   <p className="text-white text-center mt-4">{selectedItem.alt}</p>
-                </>
+                </div>
               )}
             </motion.div>
           </motion.div>
