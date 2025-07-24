@@ -13,7 +13,7 @@ function isVideo(item: GalleryItem): item is { youtubeId: string; title: string;
 }
 
 // Type guard to check if item is audio
-function isAudio(item: GalleryItem): item is { audioFile: string; title: string; alt: string; category: string; id: number; duration?: string } {
+function isAudio(item: GalleryItem): item is { audioFile: string; title: string; alt: string; category: string; id: number; duration: string } {
   return 'audioFile' in item;
 }
 
@@ -82,9 +82,7 @@ export default function FilterableGallery() {
                   <div className="w-full h-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex flex-col items-center justify-center p-4">
                     <Volume2 className="w-12 h-12 text-white mb-2" />
                     <p className="text-white text-xs text-center line-clamp-2">{item.title}</p>
-                    {item.duration && (
-                      <p className="text-white/80 text-xs mt-1">{item.duration}</p>
-                    )}
+                    <p className="text-white/80 text-xs mt-1">{item.duration}</p>
                   </div>
                 ) : isVideo(item) ? (
                   // Video thumbnail
@@ -171,9 +169,7 @@ export default function FilterableGallery() {
                   >
                     Your browser does not support the audio element.
                   </audio>
-                  {selectedItem.duration && (
-                    <p className="text-center text-sm text-gray-500 mt-3">Διάρκεια: {selectedItem.duration}</p>
-                  )}
+                  <p className="text-center text-sm text-gray-500 mt-3">Διάρκεια: {selectedItem.duration}</p>
                 </div>
               ) : isVideo(selectedItem) ? (
                 // Video iframe
