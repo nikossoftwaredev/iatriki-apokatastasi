@@ -5,6 +5,7 @@ export const galleryCategories = [
   { id: "neural", name: "Neuraltherapy", color: "bg-purple-500" },
   { id: "graz", name: "Aνατομείο Graz", color: "bg-red-500" },
   { id: "videos", name: "Βίντεο", color: "bg-blue-600" },
+  { id: "audio", name: "Ήχος", color: "bg-yellow-600" },
 ];
 
 export const galleryImages = [
@@ -95,7 +96,7 @@ export const galleryImages = [
     category: "graz",
   },
   {
-    id: 25,
+    id: 251,
     src: "/gallery/neural-therapy/neural3.jpg",
     alt: "Νευροθεραπεία - Εφαρμογή 3",
     category: "neural",
@@ -126,7 +127,7 @@ export const galleryImages = [
     category: "graz",
   },
   {
-    id: 292,
+    id: 291,
     src: "/gallery/graz/graz.jpg",
     alt: "Graz - Φωτογραφία 2",
     category: "neural",
@@ -357,10 +358,31 @@ export const galleryVideos = [
   },
 ];
 
-// Combine images and videos into a single array for the gallery
-export const galleryItems = [...galleryImages, ...galleryVideos];
+// Audio files
+export const galleryAudio = [
+  {
+    id: 63,
+    audioFile: "/gallery/audio/vretou.mp3",
+    title: "Συνέντευξη - Κα. Βρεττού",
+    alt: "Ακουστική μαρτυρία ασθενούς",
+    category: "audio",
+    duration: "7:42",
+  },
+  {
+    id: 64,
+    audioFile: "/gallery/audio/vretou2.mp3",
+    title: "Μαρτυρία ασθενούς για προλοθεραπεία",
+    alt: "Ακουστική μαρτυρία ασθενούς για τη θεραπεία με προλοθεραπεία",
+    category: "audio",
+    duration: "3:02",
+  },
+];
+
+// Combine images, videos and audio into a single array for the gallery
+export const galleryItems = [...galleryImages, ...galleryVideos, ...galleryAudio];
 
 export type GalleryImage = (typeof galleryImages)[0];
 export type GalleryVideo = (typeof galleryVideos)[0];
-export type GalleryItem = GalleryImage | GalleryVideo;
+export type GalleryAudio = (typeof galleryAudio)[0];
+export type GalleryItem = GalleryImage | GalleryVideo | GalleryAudio;
 export type GalleryCategory = (typeof galleryCategories)[0];

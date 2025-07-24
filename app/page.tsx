@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
 import BlogSection from "@/components/BlogSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/sections/Contact";
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <ServicesSection isHomePage={true} />
       <BlogSection />
       <TestimonialsSection />
       <FeaturedVideoSection />

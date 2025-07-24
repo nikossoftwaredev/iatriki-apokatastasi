@@ -9,6 +9,7 @@ import { CircleIcon } from '@/components/CircleIcon';
 import { PHONE } from '@/lib/general';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import VideoTestimonials from '@/components/VideoTestimonials';
 import { 
   Stethoscope, 
   Activity, 
@@ -111,6 +112,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <ReactMarkdown 
               remarkPlugins={[remarkGfm]}
               components={{
+                p: ({ children, ...props }) => {
+                  // Check if the paragraph contains our custom placeholder
+                  if (children && typeof children === 'string' && children.includes('{{VIDEO_TESTIMONIALS}}')) {
+                    return <VideoTestimonials />;
+                  }
+                  return <p {...props}>{children}</p>;
+                },
                 img: ({ node, ...props }) => (
                   <img
                     {...props}

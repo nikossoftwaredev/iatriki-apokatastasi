@@ -13,9 +13,9 @@ export const services: Service[] = [
   {
     id: "1",
     slug: "prolotherapeia",
-    title: "Προλοθεραπεία (prolotherapy)",
+    title: "Προλοθεραπεία",
     shortDescription:
-      "Μη χειρουργική αναγεννητική μέθοδος για συνδέσμους και τένοντες αρθρώσεων.",
+      "Μη χειρουργική, αναγεννητική, θεραπευτική μέθοδος για μυοσκελετικούς πόνους (οξύ και χρόνιο πόνο, αυχενικό σύνδρομο, οσφυαλγία, ινομυαλγία, αρθρίτιδα, τενοντοπάθειες, αθλητικές κακώσεις, μετατραυματικές αρθρίτιδες).",
     iconName: "bone",
     iconColor: "#f97316", // Orange - regenerative therapy
     markdownFile: "prolotherapeia.md",
@@ -26,18 +26,18 @@ export const services: Service[] = [
     slug: "fysiotherapeia",
     title: "Φυσικοθεραπεία",
     shortDescription:
-      "Ιατρικός βελονισμός, ηλεκτροβελονισμός για μυοσκελετικά σύνδρομα και νευρολογικές παθήσεις.",
+      "Ολοκληρωμένα προγράμματα φυσικοθεραπείας ειδικές τεχνικές κινητοποίησης, κινησιοθεραπεία.",
     iconName: "hand",
     iconColor: "#10b981", // Emerald green - healing/therapy
     markdownFile: "fysiotherapeia.md",
-    category: "diagnostic-support",
+    category: "therapeutic",
   },
   {
     id: "13",
     slug: "prp-therapeia",
-    title: "Αυτόλογα Εν. Αιμοπετάλια (PRP)",
+    title: "PRP (Platelet Rich Plasma)",
     shortDescription:
-      "Μη χειρουργική θεραπεία με χρήση των αιμοπεταλίων του ασθενή.",
+      "Αυτόλογη κυτταρική αναγέννηση - βιοδιέγερση κυττάρων δέρματος, μυών, χόνδρου, τενόντων, μέσω ένεσης με εμπλουτισμένο πλάσμα αίματος με αιμοπετάλια του ίδιου του ασθενούς. Για παθήσεις χόνδρων αρθρώσεων, κακώσεις - βλάβες μυών, τενόντων.",
     iconName: "heart",
     iconColor: "#ef4444", // Red - blood/cardiovascular
     markdownFile: "prp-therapeia.md",
@@ -46,9 +46,9 @@ export const services: Service[] = [
   {
     id: "5",
     slug: "botox-dysport",
-    title: "Εφαρμογή Botox",
+    title: "Έγχυση BOTOX-DYSPORT",
     shortDescription:
-      "Θεραπευτικές εγχύσεις για σπαστικότητα και νευρολογικές διαταραχές.",
+      "Αντιμετώπιση σπαστικότητας και δυστονιών, ρυτίδων κλπ.",
     iconName: "syringe",
     iconColor: "#8b5cf6", // Purple - pharmaceutical/injection
     markdownFile: "botox-dysport.md",
@@ -57,9 +57,9 @@ export const services: Service[] = [
   {
     id: "8",
     slug: "ozonotherapeia",
-    title: "Οξυγόνο-Οζονοθεραπεία",
+    title: "Οξυγονο-οζονοθεραπεία",
     shortDescription:
-      "Διέγερση του ανοσοποιητικού συστήματος και των μηχανισμών ίασης.",
+      "Για αντιμετώπιση μυοσκελετικού πόνου, κυτταρίτιδας, αλλεργικών παθήσεων κλπ.",
     iconName: "atom",
     iconColor: "#06b6d4", // Cyan - oxygen/air
     markdownFile: "ozonotherapeia.md",
@@ -81,40 +81,51 @@ export const services: Service[] = [
     slug: "therapeftiki-gymnastiki",
     title: "Ειδική θεραπευτική γυμναστική",
     shortDescription:
-      "Εξειδικευμένα θεραπευτικά πρωτόκολλα για την αποκατάσταση.",
+      "Με πρωτόκολλα θεραπείας για βελτίωση μυϊκής αποδοσης, ευκαμψίας και φυσικής κατάστασης.",
     iconName: "dumbbell",
     iconColor: "#22c55e", // Green - physical exercise/health
     markdownFile: "therapeftiki-gymnastiki.md",
-    category: "diagnostic-support",
+    category: "therapeutic",
   },
   {
     id: "7",
     slug: "shock-wave",
-    title: "Κρουστικοί Υπέρηχοι",
+    title: "Κρουστικά κύματα",
     shortDescription:
-      "Θεραπεία τενοντίτιδων, μυϊκών πόνων, επικονδυλίτιδας και περιαρθρίτιδας.",
+      "Shock wave για εξειδικευμένη αποκατάσταση σε τενοντίτιδες, μυϊκούς πόνους, επικονδυλίτιδα, περιαρθρίτιδα, μυοπεριτοναϊκό σύνδρομο, οσφυαλγία, αυχεναλγία, πελματιαία απονευρωσίτιδα, άκανθα πτέρνας κλπ.",
     iconName: "waves",
     iconColor: "#3b82f6", // Blue - wave therapy
     markdownFile: "shock-wave.md",
-    category: "diagnostic-support",
+    category: "therapeutic",
   },
   {
     id: "9",
     slug: "neuraltherapy",
     title: "Neuraltherapy",
     shortDescription:
-      "Αντιμετώπιση οξέων και χρόνιων πόνων και λειτουργικών διαταραχών.",
+      "Η μέθοδος 'Neuraltherapy' είναι μία πρωτοποριακή ιατρική τεχνική, που λειτουργεί και έχει σαν στόχο την ομαλοποίηση-σταθεροποίηση των διαταραχών του νευρικού συστήματος και της φυσιολογίας των νεύρων προβληματικών περιοχών. Με τη μέθοδο αυτή η αδρανοποίηση των 'πεδίων διαταραχών' γίνεται με τη διήθηση τους με τοπικό αναισθητικό, όπως προκαΐνης η λιδοκαΐνης, κάβαρη, αναστολή εξάρσεων. Άμεσως μετά την έγχυση, ο ασθενής ανακουφίζεται άμεσα από τον πόνο του στόχο την μακροχρόνια αναστολή φαρμάκων, διορθώνοντας έτσι το νευρικό του έλλειμμα.",
     iconName: "brain",
     iconColor: "#ec4899", // Pink - neural/brain therapy
     markdownFile: "neuraltherapy.md",
     category: "therapeutic",
   },
   {
+    id: "14",
+    slug: "neuroprolotherapy",
+    title: "Νευροπρολοθεραπεία",
+    shortDescription:
+      "Επιφανειακή προλοθεραπεία (P.I.T - Perineural Injection Treatment) για θεραπεία νευρογενούς πόνου. Λιγότερο επεμβατική τεχνική με υποδόριες ενέσεις γλυκόζης που στοχεύει τα δερματικά νεύρα, με ποσοστό επιτυχίας 80-100% σε χρόνιο πόνο.",
+    iconName: "activity",
+    iconColor: "#a855f7", // Purple - neural activity
+    markdownFile: "neuroprolotherapy.md",
+    category: "therapeutic",
+  },
+  {
     id: "10",
     slug: "mesotherapeia",
-    title: "Εφαρμογή Μεσοθεραπείας",
+    title: "Μεσοθεραπεία",
     shortDescription:
-      "Μικροεγχύσεις βιταμινών και υαλουρονικού οξέος για αναζωογόνηση.",
+      "Αντιμετώπιση επώδυνων μυοσκελετικών προβλημάτων, κυτταρίτιδας, αισθητικής κλπ.",
     iconName: "droplet",
     iconColor: "#14b8a6", // Teal - fluid/injection therapy
     markdownFile: "mesotherapeia.md",
@@ -129,10 +140,10 @@ export const services: Service[] = [
     iconName: "footprints",
     iconColor: "#a855f7", // Purple - foot orthotics
     markdownFile: "orthotika-pelmata.md",
-    category: "diagnostic-support",
+    category: "therapeutic",
   },
   {
-    id: "14",
+    id: "12",
     slug: "posture-assessment",
     title: "Αξιολόγηση και Διόρθωση Στάσης Σώματος",
     shortDescription:
@@ -140,17 +151,83 @@ export const services: Service[] = [
     iconName: "footprints",
     iconColor: "#e11d48", // Rose - posture assessment
     markdownFile: "posture-assessment.md",
-    category: "diagnostic-support",
+    category: "therapeutic",
   },
   {
     id: "15",
     slug: "iatrikos-velonismos",
     title: "Ιατρικός Βελονισμός",
     shortDescription:
-      "Παραδοσιακή κινεζική θεραπευτική μέθοδος για αντιμετώπιση πόνου και αποκατάσταση της ισορροπίας του οργανισμού.",
+      "Αντιμετώπιση μυοσκελετικών πόνων (αυχένα, μέση, ώμοι, κλπ), νευρολογικών παθήσεων, ημικρανίων, κεφαλαλγιών, εμβοών, αλλεργιών, δερματολογικών παθήσεων.",
     iconName: "activity",
     iconColor: "#84cc16", // Lime - acupuncture/traditional medicine
     markdownFile: "iatrikos-velonismos.md",
+    category: "therapeutic",
+  },
+  {
+    id: "16",
+    slug: "cheirismoi-spondylikis-stilis",
+    title: "Χειρισμοί σπονδυλικής στήλης-αρθρώσεων",
+    shortDescription:
+      "Ανατάξεις ): αντιμετώπιση πόνων από αποκλεισμό στπλν αρθρώσεων.",
+    iconName: "bone",
+    iconColor: "#059669", // Emerald - spinal manipulation
+    markdownFile: "cheirismoi-spondylikis-stilis.md",
+    category: "therapeutic",
+  },
+  {
+    id: "17",
+    slug: "neural-prolotherapeia",
+    title: "Neural-προλοθεραπεία",
+    shortDescription:
+      "Έγχυση και ενυπωσιακή ανακούφιση του πόνου με φυσικό τρόπο (παυμένος ώμος, ισχιαλγία, αυχεναλγία, σύνδρομο καρπιαίου σωλήνα, επικονδυλίτιδα κλπ).",
+    iconName: "zap",
+    iconColor: "#f59e0b", // Amber - neural therapy
+    markdownFile: "neural-prolotherapeia.md",
+    category: "therapeutic",
+  },
+  {
+    id: "18",
+    slug: "egchyseis-endarthrikees",
+    title: "Εγχύσεις ενδαρθρικές, παρασπονδυλικές, διηθήσεις",
+    shortDescription:
+      "Σε επώδυνα σημεία, στο facets.",
+    iconName: "syringe",
+    iconColor: "#0891b2", // Cyan - injection therapy
+    markdownFile: "egchyseis-endarthrikees.md",
+    category: "therapeutic",
+  },
+  {
+    id: "19",
+    slug: "ilektrofysiologikos-elegchos",
+    title: "Ηλεκτροφυσιολογικός έλεγχος",
+    shortDescription:
+      "Διαγνωστική εξέταση για την αξιολόγηση της λειτουργίας του νευρικού συστήματος.",
+    iconName: "activity",
+    iconColor: "#7c3aed", // Violet - electrical tests
+    markdownFile: "ilektrofysiologikos-elegchos.md",
+    category: "diagnostic-support",
+  },
+  {
+    id: "20",
+    slug: "ilektromyografima",
+    title: "Ηλεκτρομυογράφημα",
+    shortDescription:
+      "Κινητική και αισθητική ταχ. αγωγής νεύρωνω (ΗΜΓ, ΚΤΑ, ΑΤΑ) για ακριβή διάγνωση αυχενικού συνδρόμου, οσφυαλγίας, ισχιαλγίας, συνδρόμου καρπιαίου σωλήνα κλπ.",
+    iconName: "waves",
+    iconColor: "#1e40af", // Blue - EMG waves
+    markdownFile: "ilektromyografima.md",
+    category: "diagnostic-support",
+  },
+  {
+    id: "21",
+    slug: "emviomichaniki-dierevnisi",
+    title: "Εμβιομηχανική διερεύνηση και αξιολόγηση στάσης σώματος",
+    shortDescription:
+      "Λειτουργική εκτίμηση όρθιας στάσης, βάδισης για αποκατάσταση κινητικού ελέγχου.",
+    iconName: "footprints",
+    iconColor: "#0f766e", // Teal - biomechanics
+    markdownFile: "emviomichaniki-dierevnisi.md",
     category: "therapeutic",
   },
 ];
@@ -169,7 +246,7 @@ export const serviceCategories = {
     description: "Σύγχρονες θεραπευτικές μέθοδοι για την αντιμετώπιση του πόνου"
   },
   "diagnostic-support": {
-    title: "Διαγνωστικές & Υποστηρικτικές Υπηρεσίες",
+    title: "Διαγνωστικές Υπηρεσίες",
     description: "Εξειδικευμένες διαγνωστικές εξετάσεις και υποστηρικτικές θεραπείες"
   }
 };

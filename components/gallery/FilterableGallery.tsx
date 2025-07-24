@@ -3,13 +3,18 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { X, Play } from "lucide-react";
+import { X, Play, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { galleryCategories, galleryItems, type GalleryItem } from "@/lib/gallery-data";
 
 // Type guard to check if item is a video
 function isVideo(item: GalleryItem): item is { youtubeId: string; title: string; alt: string; category: string; id: number } {
   return 'youtubeId' in item;
+}
+
+// Type guard to check if item is audio
+function isAudio(item: GalleryItem): item is { audioFile: string; title: string; alt: string; category: string; id: number; duration?: string } {
+  return 'audioFile' in item;
 }
 
 export default function FilterableGallery() {
@@ -72,7 +77,16 @@ export default function FilterableGallery() {
                 className="relative aspect-square cursor-pointer overflow-hidden rounded-lg group"
                 onClick={() => setSelectedItem(item)}
               >
-                {isVideo(item) ? (
+                {isAudio(item) ? (
+                  // Audio thumbnail
+                  <div className="w-full h-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex flex-col items-center justify-center p-4">
+                    <Volume2 className="w-12 h-12 text-white mb-2" />
+                    <p className="text-white text-xs text-center line-clamp-2">{item.title}</p>
+                    {item.duration && (
+                      <p className="text-white/80 text-xs mt-1">{item.duration}</p>
+                    )}
+                  </div>
+                ) : isVideo(item) ? (
                   // Video thumbnail
                   <div className="w-full h-full bg-gray-800 flex items-center justify-center">
                     <Image
@@ -141,7 +155,27 @@ export default function FilterableGallery() {
                 <X className="h-8 w-8" />
               </button>
               
-              {isVideo(selectedItem) ? (
+              {isAudio(selectedItem) ? (
+                // Audio player
+                <div className="bg-white rounded-lg p-8 max-w-md w-full mx-auto">
+                  <div className="text-center mb-6">
+                    <Volume2 className="w-16 h-16 text-primary mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-900">{selectedItem.title}</h3>
+                    <p className="text-gray-600 mt-2">{selectedItem.alt}</p>
+                  </div>
+                  <audio
+                    controls
+                    autoPlay
+                    className="w-full"
+                    src={selectedItem.audioFile}
+                  >
+                    Your browser does not support the audio element.
+                  </audio>
+                  {selectedItem.duration && (
+                    <p className="text-center text-sm text-gray-500 mt-3">Διάρκεια: {selectedItem.duration}</p>
+                  )}
+                </div>
+              ) : isVideo(selectedItem) ? (
                 // Video iframe
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                   <iframe
