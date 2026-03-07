@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm build)",
+      "Bash(npx tsc --noEmit --pretty)",
+      "Bash(node screenshot.mjs http://localhost:3001/services/therapeftiki-gymnastiki service-detail)",
+      "Bash(pnpm list sharp)",
+      "Bash(pnpm add -D sharp)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(pnpm dev)",
+      "Bash(npx next build)",
+      "Bash(ls -la \"c:\\\\Users\\\\nikos\\\\Desktop\\\\repos\\\\iatriki-apokatastasi\\\\app\\\\services\\\\markdown\"\" 2>&1 || echo \"Directory not found \")",
+      "Bash(node screenshot.mjs http://localhost:3000 hero-before)",
+      "Bash(npx shadcn@latest add scroll-area -y)",
+      "Bash(pnpm add -D puppeteer)"
+    ]
+  }
+}

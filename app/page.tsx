@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
+import TrustBar from "@/components/TrustBar";
+import ConditionsSection from "@/components/ConditionsSection";
 import ServicesSection from "@/components/ServicesSection";
-import BlogSection from "@/components/BlogSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import { ContactSection } from "@/components/sections/Contact";
-import FAQSection from "@/components/FAQSection";
 import FeaturedVideoSection from "@/components/FeaturedVideoSection";
+import FAQSection from "@/components/FAQSection";
+import { ContactSection } from "@/components/sections/Contact";
 import { PHONE, DOMAIN } from "@/lib/general";
 
 export const metadata: Metadata = {
@@ -20,12 +21,13 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServicesSection isHomePage={true} />
-      <BlogSection />
+      <TrustBar />
+      <ConditionsSection />
+      <ServicesSection isHomePage />
       <TestimonialsSection />
       <FeaturedVideoSection />
-      <ContactSection />
       <FAQSection />
+      <ContactSection />
     </>
   );
 }

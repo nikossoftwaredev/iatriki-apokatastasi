@@ -1,16 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import ImageLightbox from "@/components/ImageLightbox";
 
 interface TestimonialCardProps {
   content: string;
-  date: string;
+  date?: string;
   imageUrl?: string;
   videoUrl?: string;
   index?: number;
@@ -22,7 +17,6 @@ export default function TestimonialCard({
   videoUrl,
   index = 0
 }: TestimonialCardProps) {
-  const [showModal, setShowModal] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -42,17 +36,16 @@ export default function TestimonialCard({
           />
         </div>
       ) : imageUrl ? (
-        <div 
-          className="relative w-full h-64 overflow-hidden cursor-pointer group"
-          onClick={() => setShowModal(true)}
-        >
-          <img
-            src={imageUrl}
-            alt="Testimonial"
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-        </div>
+        <ImageLightbox src={imageUrl} alt="Testimonial">
+          <div className="relative w-full h-64 overflow-hidden group">
+            <img
+              src={imageUrl}
+              alt="Testimonial"
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+          </div>
+        </ImageLightbox>
       ) : null}
 
       <div className="p-4 flex flex-col flex-grow">
@@ -60,24 +53,7 @@ export default function TestimonialCard({
         <p className="text-gray-700 mb-3 flex-grow italic text-sm">
           &ldquo;{content}&rdquo;
         </p>
-
       </div>
-
-      {/* Image Modal */}
-      <Dialog open={showModal} onOpenChange={setShowModal}>
-        <DialogContent className="max-w-4xl p-0 overflow-hidden">
-          <DialogTitle className="sr-only">Testimonial</DialogTitle>
-          <div className="relative">
-            {imageUrl && (
-              <img
-                src={imageUrl}
-                alt="Testimonial"
-                className="w-full h-auto object-contain"
-              />
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
     </motion.div>
   );
 }

@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { X, Play, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageLightbox from "@/components/ImageLightbox";
 import { galleryCategories, galleryItems, type GalleryItem } from "@/lib/gallery-data";
 
 // Type guard to check if item is a video
@@ -74,19 +75,22 @@ export default function FilterableGallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="relative aspect-square cursor-pointer overflow-hidden rounded-lg group"
-                onClick={() => setSelectedItem(item)}
+                className="relative aspect-square overflow-hidden rounded-lg group"
               >
                 {isAudio(item) ? (
-                  // Audio thumbnail
-                  <div className="w-full h-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex flex-col items-center justify-center p-4">
+                  <div
+                    className="w-full h-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex flex-col items-center justify-center p-4 cursor-pointer"
+                    onClick={() => setSelectedItem(item)}
+                  >
                     <Volume2 className="w-12 h-12 text-white mb-2" />
                     <p className="text-white text-xs text-center line-clamp-2">{item.title}</p>
                     <p className="text-white/80 text-xs mt-1">{item.duration}</p>
                   </div>
                 ) : isVideo(item) ? (
-                  // Video thumbnail
-                  <div className="w-full h-full bg-gray-800 flex items-center justify-center">
+                  <div
+                    className="w-full h-full bg-gray-800 flex items-center justify-center cursor-pointer"
+                    onClick={() => setSelectedItem(item)}
+                  >
                     <Image
                       src={`https://img.youtube.com/vi/${item.youtubeId}/mqdefault.jpg`}
                       alt={item.alt}
@@ -103,8 +107,7 @@ export default function FilterableGallery() {
                     </div>
                   </div>
                 ) : (
-                  // Image
-                  <>
+                  <ImageLightbox src={item.src} alt={item.alt}>
                     <Image
                       src={item.src}
                       alt={item.alt}
@@ -113,8 +116,8 @@ export default function FilterableGallery() {
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       quality={75}
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-                  </>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 pointer-events-none" />
+                  </ImageLightbox>
                 )}
               </motion.div>
             ))}
@@ -127,9 +130,9 @@ export default function FilterableGallery() {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Video/Audio Lightbox Modal */}
       <AnimatePresence>
-        {selectedItem && (
+        {selectedItem && (isVideo(selectedItem) || isAudio(selectedItem)) && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -152,9 +155,8 @@ export default function FilterableGallery() {
               >
                 <X className="h-8 w-8" />
               </button>
-              
+
               {isAudio(selectedItem) ? (
-                // Audio player
                 <div className="bg-white rounded-lg p-8 max-w-md w-full mx-auto">
                   <div className="text-center mb-6">
                     <Volume2 className="w-16 h-16 text-primary mx-auto mb-4" />
@@ -172,7 +174,6 @@ export default function FilterableGallery() {
                   <p className="text-center text-sm text-gray-500 mt-3">Διάρκεια: {selectedItem.duration}</p>
                 </div>
               ) : isVideo(selectedItem) ? (
-                // Video iframe
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                   <iframe
                     className="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -186,23 +187,7 @@ export default function FilterableGallery() {
                     {selectedItem.title}
                   </p>
                 </div>
-              ) : (
-                // Image
-                <div className="relative flex flex-col items-center">
-                  <div className="relative max-h-[80vh] w-full flex items-center justify-center">
-                    <Image
-                      src={selectedItem.src}
-                      alt={selectedItem.alt}
-                      width={1200}
-                      height={800}
-                      className="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-lg"
-                      quality={90}
-                      priority
-                    />
-                  </div>
-                  <p className="text-white text-center mt-4">{selectedItem.alt}</p>
-                </div>
-              )}
+              ) : null}
             </motion.div>
           </motion.div>
         )}

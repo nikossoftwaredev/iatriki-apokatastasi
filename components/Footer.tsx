@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Hexagon } from "lucide-react";
 import { FULL_NAME, PHONE, MAIL, ADDRESS, navigation, social } from "@/lib/general";
 import { services } from "@/lib/services";
+import { SocialIcon } from "@/components/social-icon";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,17 +19,12 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">
               Εξειδικευμένες υπηρεσίες φυσικής ιατρικής και αποκατάστασης με σύγχρονες μεθόδους θεραπείας.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href={social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-             
+            <div className="flex space-x-3">
+              <SocialIcon
+                url={social.facebook}
+                icon={<Facebook className="h-5 w-5" />}
+                color="facebook"
+              />
             </div>
           </div>
 
@@ -115,12 +111,13 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 Made by{" "}
                 <a
-                  href="https://www.linkedin.com/in/nikosdim97/"
+                  href="https://hexaigon.gr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="inline-flex items-center gap-1 text-primary hover:underline"
                 >
-                  Nikos Dimitrakopoulos
+                  <Hexagon className="h-4 w-4" />
+                  hexaigon gr
                 </a>
               </p>
             </div>

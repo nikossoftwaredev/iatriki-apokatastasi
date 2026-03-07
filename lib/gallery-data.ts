@@ -2,7 +2,7 @@ export const galleryCategories = [
   { id: "all", name: "Όλες", color: "bg-gray-500" },
   { id: "clinic", name: "Ο χώρος μας", color: "bg-green-500" },
   { id: "prolotherapy", name: "Προλοθεραπεία", color: "bg-primary" },
-  { id: "neural", name: "Neuraltherapy", color: "bg-purple-500" },
+  { id: "neural", name: "Neural Therapy", color: "bg-purple-500" },
   { id: "graz", name: "Aνατομείο Graz", color: "bg-red-500" },
   { id: "videos", name: "Βίντεο", color: "bg-blue-600" },
   { id: "audio", name: "Ήχος", color: "bg-yellow-600" },

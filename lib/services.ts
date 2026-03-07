@@ -46,7 +46,7 @@ export const services: Service[] = [
   {
     id: "5",
     slug: "botox-dysport",
-    title: "Έγχυση BOTOX-DYSPORT",
+    title: "Βοτουλινική τοξίνη (Botox)",
     shortDescription:
       "Αντιμετώπιση σπαστικότητας και δυστονιών, ρυτίδων κλπ.",
     iconName: "syringe",
@@ -57,7 +57,7 @@ export const services: Service[] = [
   {
     id: "8",
     slug: "ozonotherapeia",
-    title: "Οξυγονο-οζονοθεραπεία",
+    title: "Οζονοθεραπεία",
     shortDescription:
       "Για αντιμετώπιση μυοσκελετικού πόνου, κυτταρίτιδας, αλλεργικών παθήσεων κλπ.",
     iconName: "atom",
@@ -68,7 +68,7 @@ export const services: Service[] = [
   {
     id: "3",
     slug: "diagnosi-apokatastasi",
-    title: "Διάγνωση και Αποκατάσταση",
+    title: "Κλινική εξέταση και διαγνωστική προσέγγιση",
     shortDescription:
       "Αντιμετώπιση αθλητικών κακώσεων, καταγμάτων, μυοσκελετικών, νευρολογικών και ρευματολογικών προβλημάτων.",
     iconName: "stethoscope",
@@ -90,7 +90,7 @@ export const services: Service[] = [
   {
     id: "7",
     slug: "shock-wave",
-    title: "Κρουστικά κύματα",
+    title: "Κρουστικά κύματα (Shockwave)",
     shortDescription:
       "Shock wave για εξειδικευμένη αποκατάσταση σε τενοντίτιδες, μυϊκούς πόνους, επικονδυλίτιδα, περιαρθρίτιδα, μυοπεριτοναϊκό σύνδρομο, οσφυαλγία, αυχεναλγία, πελματιαία απονευρωσίτιδα, άκανθα πτέρνας κλπ.",
     iconName: "waves",
@@ -101,7 +101,7 @@ export const services: Service[] = [
   {
     id: "9",
     slug: "neuraltherapy",
-    title: "Neuraltherapy",
+    title: "Neural Therapy",
     shortDescription:
       "Η μέθοδος 'Neuraltherapy' είναι μία πρωτοποριακή ιατρική τεχνική, που λειτουργεί και έχει σαν στόχο την ομαλοποίηση-σταθεροποίηση των διαταραχών του νευρικού συστήματος και της φυσιολογίας των νεύρων προβληματικών περιοχών. Με τη μέθοδο αυτή η αδρανοποίηση των 'πεδίων διαταραχών' γίνεται με τη διήθηση τους με τοπικό αναισθητικό, όπως προκαΐνης η λιδοκαΐνης, κάβαρη, αναστολή εξάρσεων. Άμεσως μετά την έγχυση, ο ασθενής ανακουφίζεται άμεσα από τον πόνο του στόχο την μακροχρόνια αναστολή φαρμάκων, διορθώνοντας έτσι το νευρικό του έλλειμμα.",
     iconName: "brain",
@@ -132,17 +132,6 @@ export const services: Service[] = [
     category: "therapeutic",
   },
   {
-    id: "11",
-    slug: "orthotika-pelmata",
-    title: "Κατασκευή ειδικών ορθοτικών πελμάτων",
-    shortDescription:
-      "Για μεταταρσαλγία, άκανθα πτέρνας και παραμορφώσεις ποδιών.",
-    iconName: "footprints",
-    iconColor: "#a855f7", // Purple - foot orthotics
-    markdownFile: "orthotika-pelmata.md",
-    category: "therapeutic",
-  },
-  {
     id: "12",
     slug: "posture-assessment",
     title: "Αξιολόγηση και Διόρθωση Στάσης Σώματος",
@@ -156,7 +145,7 @@ export const services: Service[] = [
   {
     id: "15",
     slug: "iatrikos-velonismos",
-    title: "Ιατρικός Βελονισμός",
+    title: "Ιατρικός βελονισμός",
     shortDescription:
       "Αντιμετώπιση μυοσκελετικών πόνων (αυχένα, μέση, ώμοι, κλπ), νευρολογικών παθήσεων, ημικρανίων, κεφαλαλγιών, εμβοών, αλλεργιών, δερματολογικών παθήσεων.",
     iconName: "activity",
@@ -167,7 +156,7 @@ export const services: Service[] = [
   {
     id: "16",
     slug: "cheirismoi-spondylikis-stilis",
-    title: "Χειρισμοί σπονδυλικής στήλης-αρθρώσεων",
+    title: "Ιατρικοί χειρισμοί σπονδυλικής στήλης και αρθρώσεων",
     shortDescription:
       "Ανατάξεις ): αντιμετώπιση πόνων από αποκλεισμό στπλν αρθρώσεων.",
     iconName: "bone",
@@ -189,7 +178,7 @@ export const services: Service[] = [
   {
     id: "18",
     slug: "egchyseis-endarthrikees",
-    title: "Εγχύσεις ενδαρθρικές, παρασπονδυλικές, διηθήσεις",
+    title: "Θεραπευτικές εγχύσεις",
     shortDescription:
       "Σε επώδυνα σημεία, στο facets.",
     iconName: "syringe",
@@ -222,13 +211,13 @@ export const services: Service[] = [
   {
     id: "21",
     slug: "emviomichaniki-dierevnisi",
-    title: "Εμβιομηχανική διερεύνηση και αξιολόγηση στάσης σώματος",
+    title: "Εμβιομηχανική αξιολόγηση στάσης σώματος",
     shortDescription:
       "Λειτουργική εκτίμηση όρθιας στάσης, βάδισης για αποκατάσταση κινητικού ελέγχου.",
     iconName: "footprints",
     iconColor: "#0f766e", // Teal - biomechanics
     markdownFile: "emviomichaniki-dierevnisi.md",
-    category: "therapeutic",
+    category: "diagnostic-support",
   },
 ];
 
@@ -241,12 +230,12 @@ export function getServicesByCategory(category: "therapeutic" | "diagnostic-supp
 }
 
 export const serviceCategories = {
-  therapeutic: {
-    title: "Θεραπευτικές Τεχνικές",
-    description: "Σύγχρονες θεραπευτικές μέθοδοι για την αντιμετώπιση του πόνου"
-  },
   "diagnostic-support": {
-    title: "Διαγνωστικές Υπηρεσίες",
-    description: "Εξειδικευμένες διαγνωστικές εξετάσεις και υποστηρικτικές θεραπείες"
-  }
+    title: "Διαγνωστικές Πράξεις",
+    description: "Κλινική εξέταση, νευροφυσιολογικός έλεγχος και εμβιομηχανική αξιολόγηση"
+  },
+  therapeutic: {
+    title: "Θεραπευτικές Πράξεις",
+    description: "Σύγχρονες θεραπευτικές μέθοδοι για την αντιμετώπιση του πόνου και την αποκατάσταση"
+  },
 };
