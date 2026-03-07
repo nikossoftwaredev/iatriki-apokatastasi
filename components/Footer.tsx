@@ -108,18 +108,16 @@ export default function Footer() {
               </p>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
-                Made by{" "}
-                <a
-                  href="https://hexaigon.gr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-primary hover:underline"
-                >
-                  <Hexagon className="h-4 w-4" />
-                  hexaigon gr
-                </a>
-              </p>
+              <a
+                href="https://hexaigon.gr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-gray-400 text-sm hover:text-primary transition-colors"
+              >
+                Made by
+                <Hexagon className="h-4 w-4" />
+                hexaigon gr
+              </a>
             </div>
           </div>
         </div>
