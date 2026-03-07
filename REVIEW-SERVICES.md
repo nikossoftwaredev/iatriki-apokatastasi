@@ -43,12 +43,12 @@
 
 | # | Υπηρεσία | Πρόβλημα |
 |---|----------|----------|
-| 1 | [Χειρισμοί σπονδυλικής στήλης](https://iatriki-apokatastasi.vercel.app/services/cheirismoi-spondylikis-stilis) | Περιγραφή: `"Ανατάξεις ): αντιμετώπιση πόνων από αποκλεισμό στπλν αρθρώσεων."` — σπασμένη πρόταση, `στπλν` δεν είναι λέξη |
-| 2 | [Θεραπευτικές εγχύσεις](https://iatriki-apokatastasi.vercel.app/services/egchyseis-endarthrikees) | Περιγραφή: `"Σε επώδυνα σημεία, στο facets."` — ημιτελής πρόταση |
-| 3 | [Ηλεκτρομυογράφημα](https://iatriki-apokatastasi.vercel.app/services/ilektromyografima) | Περιγραφή: `"νεύρωνω"` αντί `"νεύρων"`, `"ταχ. αγωγής"` αντί `"ταχύτητα αγωγής"` |
-| 4 | [Neural-προλοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/neural-prolotherapeia) | Περιγραφή: `"παυμένος ώμος"` αντί `"παγωμένος ώμος"` |
-| 5 | [Φυσικοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/fysiotherapeia) | Περιγραφή: `"φυσικοθεραπείας ειδικές τεχνικές"` — λείπει η λέξη `"με"` |
-| 6 | [Neural Therapy](https://iatriki-apokatastasi.vercel.app/services/neuraltherapy) | Περιγραφή πολύ μεγάλη και μπερδεμένη, φράσεις χωρίς νόημα (`"κάβαρη, αναστολή εξάρσεων"`) |
+| ~~1~~ | ~~[Χειρισμοί σπονδυλικής στήλης](https://iatriki-apokatastasi.vercel.app/services/cheirismoi-spondylikis-stilis)~~ | ~~Σπασμένη πρόταση~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
+| ~~2~~ | ~~[Θεραπευτικές εγχύσεις](https://iatriki-apokatastasi.vercel.app/services/egchyseis-endarthrikees)~~ | ~~Ημιτελής πρόταση~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
+| ~~3~~ | ~~[Ηλεκτρομυογράφημα](https://iatriki-apokatastasi.vercel.app/services/ilektromyografima)~~ | ~~Τυπογραφικά~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
+| ~~4~~ | ~~[Neural-προλοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/neural-prolotherapeia)~~ | ~~"παυμένος" → "παγωμένος"~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
+| ~~5~~ | ~~[Φυσικοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/fysiotherapeia)~~ | ~~Λείπει "με"~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
+| 6 | [Neural Therapy](https://iatriki-apokatastasi.vercel.app/services/neuraltherapy) | Περιγραφή πολύ μεγάλη και μπερδεμένη — **ΧΡΕΙΑΖΕΤΑΙ ΑΝΑΔΙΑΤΥΠΩΣΗ ΑΠΟ ΙΑΤΡΟ** |
 
 ### Σελίδες με πολύ λίγο κείμενο
 
@@ -65,9 +65,9 @@
 |---|----------|----------|
 | ~~11~~ | ~~[Φυσικοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/fysiotherapeia)~~ | ~~Ρωσικοί χαρακτήρες~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
 | ~~12~~ | ~~[Οζονοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/ozonotherapeia)~~ | ~~Λάθος link prolotherapy.gr~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
-| 13 | [Οζονοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/ozonotherapeia) | Αρχαϊκή γλώσσα: `"γλοιότητος"`, `"συγκολλήσεώς τους"` |
-| 14 | [Προλοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/prolotherapeia) | Ημιτελής πρόταση: `"Εφαρμόζεται πριν και λίγη ποσότητα τοπικού αναισθητικού"` |
-| 15 | [Θεραπευτική γυμναστική](https://iatriki-apokatastasi.vercel.app/services/therapeftiki-gymnastiki) | Συντομογραφίες χωρίς εξήγηση: `"ΑΕΕ"`, `"ΝΜ"`, `"ΚΕΖ"` |
+| ~~13~~ | ~~[Οζονοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/ozonotherapeia)~~ | ~~Αρχαϊκή γλώσσα~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
+| ~~14~~ | ~~[Προλοθεραπεία](https://iatriki-apokatastasi.vercel.app/services/prolotherapeia)~~ | ~~Ημιτελής πρόταση~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
+| ~~15~~ | ~~[Θεραπευτική γυμναστική](https://iatriki-apokatastasi.vercel.app/services/therapeftiki-gymnastiki)~~ | ~~Συντομογραφίες~~ — **ΔΙΟΡΘΩΘΗΚΕ** |
 
 ---
 

@@ -26,7 +26,7 @@ export const services: Service[] = [
     slug: "fysiotherapeia",
     title: "Φυσικοθεραπεία",
     shortDescription:
-      "Ολοκληρωμένα προγράμματα φυσικοθεραπείας ειδικές τεχνικές κινητοποίησης, κινησιοθεραπεία.",
+      "Ολοκληρωμένα προγράμματα φυσικοθεραπείας με ειδικές τεχνικές κινητοποίησης, κινησιοθεραπεία.",
     iconName: "hand",
     iconColor: "#10b981", // Emerald green - healing/therapy
     markdownFile: "fysiotherapeia.md",
@@ -158,7 +158,7 @@ export const services: Service[] = [
     slug: "cheirismoi-spondylikis-stilis",
     title: "Ιατρικοί χειρισμοί σπονδυλικής στήλης και αρθρώσεων",
     shortDescription:
-      "Ανατάξεις ): αντιμετώπιση πόνων από αποκλεισμό στπλν αρθρώσεων.",
+      "Ανατάξεις: αντιμετώπιση πόνων από αποκλεισμό των αρθρώσεων.",
     iconName: "bone",
     iconColor: "#059669", // Emerald - spinal manipulation
     markdownFile: "cheirismoi-spondylikis-stilis.md",
@@ -169,7 +169,7 @@ export const services: Service[] = [
     slug: "neural-prolotherapeia",
     title: "Neural-προλοθεραπεία",
     shortDescription:
-      "Έγχυση και ενυπωσιακή ανακούφιση του πόνου με φυσικό τρόπο (παυμένος ώμος, ισχιαλγία, αυχεναλγία, σύνδρομο καρπιαίου σωλήνα, επικονδυλίτιδα κλπ).",
+      "Έγχυση και εντυπωσιακή ανακούφιση του πόνου με φυσικό τρόπο (παγωμένος ώμος, ισχιαλγία, αυχεναλγία, σύνδρομο καρπιαίου σωλήνα, επικονδυλίτιδα κλπ).",
     iconName: "zap",
     iconColor: "#f59e0b", // Amber - neural therapy
     markdownFile: "neural-prolotherapeia.md",
@@ -180,7 +180,7 @@ export const services: Service[] = [
     slug: "egchyseis-endarthrikees",
     title: "Θεραπευτικές εγχύσεις",
     shortDescription:
-      "Σε επώδυνα σημεία, στο facets.",
+      "Θεραπευτικές εγχύσεις σε επώδυνα σημεία και αρθρώσεις (facet joints, ενδαρθρικές, trigger points).",
     iconName: "syringe",
     iconColor: "#0891b2", // Cyan - injection therapy
     markdownFile: "egchyseis-endarthrikees.md",
@@ -202,7 +202,7 @@ export const services: Service[] = [
     slug: "ilektromyografima",
     title: "Ηλεκτρομυογράφημα",
     shortDescription:
-      "Κινητική και αισθητική ταχ. αγωγής νεύρωνω (ΗΜΓ, ΚΤΑ, ΑΤΑ) για ακριβή διάγνωση αυχενικού συνδρόμου, οσφυαλγίας, ισχιαλγίας, συνδρόμου καρπιαίου σωλήνα κλπ.",
+      "Κινητική και αισθητική ταχύτητα αγωγής νεύρων (ΗΜΓ, ΚΤΑ, ΑΤΑ) για ακριβή διάγνωση αυχενικού συνδρόμου, οσφυαλγίας, ισχιαλγίας, συνδρόμου καρπιαίου σωλήνα κλπ.",
     iconName: "waves",
     iconColor: "#1e40af", // Blue - EMG waves
     markdownFile: "ilektromyografima.md",

@@ -13,7 +13,10 @@
       "Bash(node screenshot.mjs http://localhost:3000 hero-before)",
       "Bash(npx shadcn@latest add scroll-area -y)",
       "Bash(pnpm add -D puppeteer)",
-      "Bash(xxd)"
+      "Bash(xxd)",
+      "WebFetch(domain:vercel.com)",
+      "Bash(npx fix-react2shell-next)",
+      "Bash(npx fix-react2shell-next --fix)"
     ]
   }
 }
