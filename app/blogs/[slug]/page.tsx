@@ -172,9 +172,11 @@ export default async function BlogPost({ params }: BasePageProps) {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                  img: (props) => (
+                  img: ({ alt, ...props }) => (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       {...props}
+                      alt={alt || ""}
                       className="rounded-lg shadow-lg mx-auto"
                       style={{ maxWidth: '100%', height: 'auto' }}
                     />

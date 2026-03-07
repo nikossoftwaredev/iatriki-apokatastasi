@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Mail, Phone } from "lucide-react";
+import { Calendar, MapPin, Phone } from "lucide-react";
 import { FULL_NAME, ADDRESS, PHONE, credentials } from "@/lib/general";
 
 export default function ResumeHeader() {

@@ -24,7 +24,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo/Name */}
           <Link href="/" className="flex items-center space-x-3">
-            <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
+            <img src="/images/logo.png" alt="Ιατρική Αποκατάσταση - Φυσίατρος Ηλιούπολη" className="h-8 w-auto" />
             <span className="text-primary font-medium tracking-wider" style={{ fontSize: '0.875rem', letterSpacing: '0.05em' }}>
               ΙΑΤΡΙΚΗ ΑΠΟΚΑΤΑΣΤΑΣΗ
             </span>

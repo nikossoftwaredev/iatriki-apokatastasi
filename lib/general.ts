@@ -3,7 +3,8 @@ export const ADDRESS = "ΑΝΔΡΟΥΤΣΟΥ 22 ΗΛΙΟΥΠΟΛΗ";
 export const FACEBOOK =
   "https://www.facebook.com/p/%CE%99%CE%B1%CF%84%CF%81%CE%B9%CE%BA%CE%AE-%CE%91%CF%80%CE%BF%CE%BA%CE%B1%CF%84%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7-100066614382726/";
 export const MAIL = "info@iatriki-apokatastasi.gr";
-export const DOMAIN = "iatriki-apokatastasi.gr";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://iatriki-apokatastasi.vercel.app";
+export const DOMAIN = new URL(SITE_URL).hostname;
 export const START_YEAR = 1993;
 export const NAME = "Σταύρος Δημητρακόπουλος";
 export const LAST_NAME = "Δημητρακόπουλος";

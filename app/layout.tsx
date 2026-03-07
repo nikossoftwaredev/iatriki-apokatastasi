@@ -30,6 +30,18 @@ export const metadata: Metadata = {
     locale: "el_GR",
     url: `https://${DOMAIN}`,
     siteName: BUSINESS_NAME,
+    images: [{
+      url: `https://${DOMAIN}/images/og-default.png`,
+      width: 1200,
+      height: 630,
+      alt: BUSINESS_NAME,
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Φυσίατρος Ηλιούπολη | Προλοθεραπεία & Θεραπεία Πόνου",
+    description: "Εξειδικευμένες θεραπείες για πόνους στη μέση, αυχένα, γόνατο. Προλοθεραπεία, PRP, βελονισμός στην Ηλιούπολη.",
+    images: [`https://${DOMAIN}/images/og-default.png`],
   },
   robots: {
     index: true,
@@ -42,9 +54,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code", // Add your actual Google verification code
-  },
+  // verification: {
+  //   google: "your-google-verification-code", // TODO: Add actual Google Search Console verification code
+  // },
 };
 
 // JSON-LD Structured Data

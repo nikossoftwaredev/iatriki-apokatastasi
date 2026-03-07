@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Tv, Calendar } from "lucide-react";
+import { Play, Tv } from "lucide-react";
 import { motion } from "framer-motion";
 
 const FeaturedVideoSection = () => {

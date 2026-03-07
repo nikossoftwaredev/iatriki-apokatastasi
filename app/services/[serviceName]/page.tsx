@@ -219,9 +219,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
                       }
                       return <p {...props}>{children}</p>;
                     },
-                    img: (props) => (
+                    img: ({ alt, ...props }) => (
+                      // eslint-disable-next-line @next/next/no-img-element
                       <img
                         {...props}
+                        alt={alt || ""}
                         className="rounded-lg shadow-lg mx-auto"
                         style={{ maxWidth: '100%', height: 'auto' }}
                       />
