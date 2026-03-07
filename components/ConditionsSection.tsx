@@ -7,7 +7,7 @@ const conditions = [
   { label: "Πόνο στη μέση", href: "/services/prolotherapeia" },
   { label: "Αυχενικό σύνδρομο", href: "/services/prolotherapeia" },
   { label: "Πόνο στο γόνατο", href: "/services/prp-therapeia" },
-  { label: "Ισχιαλγία", href: "/services/neural-prolotherapeia" },
+  { label: "Ισχιαλγία", href: "/services/neuraltherapy" },
   { label: "Τενοντίτιδες", href: "/services/shock-wave" },
   { label: "Αθλητικές κακώσεις", href: "/services/fysiotherapeia" },
   { label: "Αρθρίτιδες", href: "/services/prolotherapeia" },
