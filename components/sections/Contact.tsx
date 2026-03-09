@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CircleIcon } from "@/components/CircleIcon";
 import { Phone, Mail, MapPin, Clock, CalendarDays } from "lucide-react";
-import { ADDRESS, PHONE, MAIL, workingHours, MAP_IFRAME, DOMAIN } from "@/lib/general";
+import { ADDRESS, PHONE, MAIL, workingHours, MAP_IFRAME } from "@/lib/general";
 import {
   Carousel,
   CarouselContent,
@@ -47,13 +47,13 @@ export function ContactSection() {
               >
                 <CarouselContent>
                   {[
-                    { src: `https://www.${DOMAIN}/images/stories/slideshow/1-iatreio_1.jpg`, title: "Χώρος αναμονής" },
-                    { src: `https://www.${DOMAIN}/images/stories/slideshow/2-iatreio_2.jpg`, title: "Χώρος βελτίωσης μυικής απόδοσης" },
-                    { src: `https://www.${DOMAIN}/images/stories/slideshow/3-iatreio_3.jpg`, title: "Χώρος θεραπευτικών ασκήσεων" },
-                    { src: `https://www.${DOMAIN}/images/stories/slideshow/4-iatreio_4.jpg`, title: "Γυμναστήριο" },
-                    { src: `https://www.${DOMAIN}/images/stories/slideshow/5-iatreio_5.jpg`, title: "Χώρος θεραπευτικής μάλαξης και βελονισμού" },
-                    { src: `https://www.${DOMAIN}/images/stories/slideshow/6-iatreio_6.jpg`, title: "Χώρος εφαρμογής φυσικών μέσων" },
-                    { src: `https://www.${DOMAIN}/images/stories/slideshow/7-iatreio_7.jpg`, title: "Κρουστικοί Υπέρηχοι" },
+                    { src: "/images/slideshow/1-iatreio_1.jpg", title: "Χώρος αναμονής" },
+                    { src: "/images/slideshow/2-iatreio_2.jpg", title: "Χώρος βελτίωσης μυικής απόδοσης" },
+                    { src: "/images/slideshow/3-iatreio_3.jpg", title: "Χώρος θεραπευτικών ασκήσεων" },
+                    { src: "/images/slideshow/4-iatreio_4.jpg", title: "Γυμναστήριο" },
+                    { src: "/images/slideshow/5-iatreio_5.jpg", title: "Χώρος θεραπευτικής μάλαξης και βελονισμού" },
+                    { src: "/images/slideshow/6-iatreio_6.jpg", title: "Χώρος εφαρμογής φυσικών μέσων" },
+                    { src: "/images/slideshow/7-iatreio_7.jpg", title: "Κρουστικοί Υπέρηχοι" },
                   ].map((image, index) => (
                     <CarouselItem key={index}>
                       <div className="relative h-[350px]">
