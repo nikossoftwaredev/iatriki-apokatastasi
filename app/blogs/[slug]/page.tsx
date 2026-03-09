@@ -1,3 +1,5 @@
+export const revalidate = 3600; // revalidate every 1 hour
+
 import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";

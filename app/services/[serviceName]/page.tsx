@@ -1,3 +1,5 @@
+export const revalidate = 3600; // revalidate every 1 hour
+
 import { notFound } from 'next/navigation';
 import { getServiceBySlug, services } from '@/lib/services';
 import fs from 'fs/promises';
@@ -214,8 +216,32 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   components={{
                     h1: () => null,
                     p: ({ children, ...props }) => {
-                      if (children && typeof children === 'string' && children.includes('{{VIDEO_TESTIMONIALS}}')) {
-                        return <VideoTestimonials />;
+                      if (children && typeof children === 'string') {
+                        if (children.includes('{{VIDEO_TESTIMONIALS}}')) {
+                          return <VideoTestimonials />;
+                        }
+                        const youtubeMatch = children.match(/\{\{YOUTUBE:([^:}]+)(?::([^}]*))?\}\}/);
+                        if (youtubeMatch) {
+                          const videoId = youtubeMatch[1];
+                          const title = youtubeMatch[2] || '';
+                          return (
+                            <div className="my-6">
+                              <div className="aspect-video">
+                                <iframe
+                                  width="100%"
+                                  height="100%"
+                                  src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+                                  title={title}
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                  className="rounded-lg shadow-lg"
+                                />
+                              </div>
+                              {title && <p className="text-sm text-gray-600 mt-2">{title}</p>}
+                            </div>
+                          );
+                        }
                       }
                       return <p {...props}>{children}</p>;
                     },
