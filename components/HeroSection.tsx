@@ -53,7 +53,15 @@ export default function HeroSection() {
             {/* Credentials */}
             <ul className="hidden sm:block text-sm text-gray-600 space-y-0.5 mb-4 list-disc pl-4">
               {credentials.slice(1).map((cred, i) => (
-                <li key={i}>{cred}</li>
+                <li key={i}>
+                  {cred.url ? (
+                    <a href={cred.url} target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">
+                      {cred.text}
+                    </a>
+                  ) : (
+                    cred.text
+                  )}
+                </li>
               ))}
             </ul>
 
@@ -93,7 +101,15 @@ export default function HeroSection() {
           className="sm:hidden text-xs text-gray-600 space-y-0.5 mt-4 list-disc pl-5 max-w-5xl mx-auto"
         >
           {credentials.slice(1).map((cred, i) => (
-            <li key={i}>{cred}</li>
+            <li key={i}>
+              {cred.url ? (
+                <a href={cred.url} target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">
+                  {cred.text}
+                </a>
+              ) : (
+                cred.text
+              )}
+            </li>
           ))}
         </motion.ul>
       </div>

@@ -30,7 +30,7 @@ export default function ResumeHeader() {
               <div className="space-y-4">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-1">{FULL_NAME}</h2>
-                  <p className="text-lg text-primary">{credentials[0]}</p>
+                  <p className="text-lg text-primary">{credentials[0].text}</p>
                 </div>
                 
                 <div className="space-y-2 text-gray-600">
@@ -64,7 +64,7 @@ export default function ResumeHeader() {
             <div className="mt-6 pt-6 border-t border-gray-200">
               <div className="flex flex-wrap gap-4 justify-center text-sm">
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">
-                  {credentials[2]}
+                  {credentials[2].text}
                 </span>
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">
                   Διπλωματούχος Βελονισμού E.C.P.D (ΟΗΕ)

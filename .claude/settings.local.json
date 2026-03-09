@@ -19,7 +19,8 @@
       "Bash(npx fix-react2shell-next --fix)",
       "Bash(pip install Pillow)",
       "Bash(npx puppeteer --version)",
-      "Bash(pnpm add @vercel/analytics)"
+      "Bash(pnpm add @vercel/analytics)",
+      "Read(//c/Users/nikos/.claude/skills/seo-audit/**)"
     ]
   }
 }

@@ -45,15 +45,16 @@ export const insurance = {
 };
 
 // Credentials
-export const credentials = [
-  "Ιατρός Αποκατάστασης - Φυσίατρος",
-  "Ειδικός Αθλητίατρος",
-  "Μετεκπαιδευθείς στην Πανεπιστημιακή Κλινική Του Μιλάνου",
-  "Fellow of the European Board of PRM",
-  "Διπλωματούχος Βελονισμού E.C.P.D (ΟΗΕ)",
-  "Μέλος της Αθλητιατρικής Εταιρείας Ελλάδος",
-  "Μέλος της Ευρωπαϊκής εταιρείας της προλοθεραπείας (ESP)",
-  "Μέλος της Ελληνικής Εταιρείας Φυσικής Ιατρικής και Αποκατάστασης (ΕΕΦΙΑΠ)",
+export type Credential = { text: string; url?: string };
+export const credentials: Credential[] = [
+  { text: "Ιατρός Αποκατάστασης - Φυσίατρος" },
+  { text: "Μέλος της Ελληνικής Εταιρείας Neural Therapy", url: "https://neuraltherapy.gr/" },
+  { text: "Μετεκπαιδευθείς στην Πανεπιστημιακή Κλινική Του Μιλάνου" },
+  { text: "Fellow of the European Board of PRM" },
+  { text: "Διπλωματούχος Βελονισμού E.C.P.D (ΟΗΕ)" },
+  { text: "Μέλος της Αθλητιατρικής Εταιρείας Ελλάδος" },
+  { text: "Μέλος της Ευρωπαϊκής εταιρείας της προλοθεραπείας (ESP)" },
+  { text: "Μέλος της Ελληνικής Εταιρείας Φυσικής Ιατρικής και Αποκατάστασης (ΕΕΦΙΑΠ)" },
 ];
 
 // Professional associations and affiliations

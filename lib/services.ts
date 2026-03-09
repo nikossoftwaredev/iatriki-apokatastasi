@@ -78,17 +78,6 @@ export const services: Service[] = [
     category: "therapeutic",
   },
   {
-    id: "8",
-    slug: "ozonotherapeia",
-    title: "Οζονοθεραπεία",
-    shortDescription:
-      "Για αντιμετώπιση μυοσκελετικού πόνου, κυτταρίτιδας, αλλεργικών παθήσεων κλπ.",
-    iconName: "atom",
-    iconColor: "#06b6d4", // Cyan - oxygen/air
-    markdownFile: "ozonotherapeia.md",
-    category: "therapeutic",
-  },
-  {
     id: "9",
     slug: "neuraltherapy",
     title: "Neural Therapy",
@@ -97,6 +86,28 @@ export const services: Service[] = [
     iconName: "brain",
     iconColor: "#ec4899", // Pink - neural/brain therapy
     markdownFile: "neuraltherapy.md",
+    category: "therapeutic",
+  },
+  {
+    id: "22",
+    slug: "neural-prolotherapeia",
+    title: "Neural-προλοθεραπεία",
+    shortDescription:
+      "Έγχυση και εντυπωσιακή ανακούφιση του πόνου με φυσικό τρόπο (παγωμένος ώμος, ισχιαλγία, αυχεναλγία, σύνδρομο καρπιαίου σωλήνα, επικονδυλίτιδα κλπ).",
+    iconName: "zap",
+    iconColor: "#f59e0b", // Amber - neural therapy
+    markdownFile: "neural-prolotherapeia.md",
+    category: "therapeutic",
+  },
+  {
+    id: "8",
+    slug: "ozonotherapeia",
+    title: "Οζονοθεραπεία",
+    shortDescription:
+      "Για αντιμετώπιση μυοσκελετικού πόνου, κυτταρίτιδας, αλλεργικών παθήσεων κλπ.",
+    iconName: "atom",
+    iconColor: "#06b6d4", // Cyan - oxygen/air
+    markdownFile: "ozonotherapeia.md",
     category: "therapeutic",
   },
   {
@@ -169,23 +180,12 @@ export const services: Service[] = [
   {
     id: "19",
     slug: "ilektrofysiologikos-elegchos",
-    title: "Ηλεκτροφυσιολογικός έλεγχος",
+    title: "Ηλεκτροφυσιολογικός έλεγχος - Ηλεκτρομυογράφημα",
     shortDescription:
-      "Διαγνωστική εξέταση για την αξιολόγηση της λειτουργίας του νευρικού συστήματος.",
+      "Ηλεκτρομυογράφημα (ΗΜΓ), κινητική και αισθητική ταχύτητα αγωγής νεύρων (ΚΤΑ, ΑΤΑ) για ακριβή διάγνωση αυχενικού συνδρόμου, οσφυαλγίας, ισχιαλγίας, συνδρόμου καρπιαίου σωλήνα κλπ.",
     iconName: "activity",
     iconColor: "#7c3aed", // Violet - electrical tests
     markdownFile: "ilektrofysiologikos-elegchos.md",
-    category: "diagnostic-support",
-  },
-  {
-    id: "20",
-    slug: "ilektromyografima",
-    title: "Ηλεκτρομυογράφημα",
-    shortDescription:
-      "Κινητική και αισθητική ταχύτητα αγωγής νεύρων (ΗΜΓ, ΚΤΑ, ΑΤΑ) για ακριβή διάγνωση αυχενικού συνδρόμου, οσφυαλγίας, ισχιαλγίας, συνδρόμου καρπιαίου σωλήνα κλπ.",
-    iconName: "waves",
-    iconColor: "#1e40af", // Blue - EMG waves
-    markdownFile: "ilektromyografima.md",
     category: "diagnostic-support",
   },
   {
