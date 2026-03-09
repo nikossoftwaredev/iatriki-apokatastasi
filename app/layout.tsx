@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BUSINESS_NAME, FULL_NAME, PHONE, DOMAIN } from "@/lib/general";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { BookingProvider } from "@/contexts/BookingContext";
 import GlobalBookingDialog from "@/components/GlobalBookingDialog";
 
@@ -149,6 +150,7 @@ export default function RootLayout({
           <Footer />
           <GlobalBookingDialog />
         </BookingProvider>
+        <Analytics />
       </body>
     </html>
   );
