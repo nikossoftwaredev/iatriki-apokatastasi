@@ -3,8 +3,16 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CircleIcon } from "@/components/CircleIcon";
-import { Phone, Mail, MapPin, Clock, CalendarDays } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Loader2, User, MessageSquare, Stethoscope } from "lucide-react";
 import { ADDRESS, PHONE, MAIL, workingHours, MAP_IFRAME } from "@/lib/general";
+import { services } from "@/lib/services";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Carousel,
   CarouselContent,
@@ -13,9 +21,30 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useBooking } from "@/contexts/BookingContext";
+import { submitContactForm } from "@/app/actions/contact";
+import { useState, useRef } from "react";
 
 export function ContactSection() {
   const { openDialog } = useBooking();
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+  const [selectedService, setSelectedService] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  async function handleSubmit(formData: FormData) {
+    setStatus("sending");
+    setErrorMsg("");
+    const result = await submitContactForm(formData);
+    if (result.success) {
+      setStatus("success");
+      formRef.current?.reset();
+      setSelectedService("");
+      setTimeout(() => setStatus("idle"), 4000);
+    } else {
+      setStatus("error");
+      setErrorMsg(result.error || "Κάτι πήγε στραβά. Δοκιμάστε ξανά.");
+    }
+  }
 
   return (
     <section id="contact" className="py-16 md:py-24">
@@ -153,39 +182,129 @@ export function ContactSection() {
                   <p className="text-sm text-gray-600 mt-1">{workingHours.byAppointment}</p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
 
-          {/* Bottom Right - Appointment Schedule */}
-          <Card id="appointment" className="h-full">
-            <CardHeader>
-              <CardTitle>Κλείστε Ραντεβού</CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col justify-center h-[calc(100%-5rem)]">
-              <div className="text-center">
-                <CalendarDays className="h-12 w-12 text-primary mx-auto mb-4" />
-                <p className="text-gray-600 mb-6">
-                  Τα ραντεβού κλείνονται μόνο τηλεφωνικά
-                </p>
-                
+              <div className="pt-4 border-t">
                 <Button
                   size="lg"
                   onClick={() => openDialog()}
-                  className="w-full max-w-xs mx-auto"
+                  className="w-full"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Κάντε Ραντεβού
+                  Κλείστε Ραντεβού
                 </Button>
-                
-                <div className="mt-4">
-                  <a 
-                    href={`tel:${PHONE}`}
-                    className="text-lg font-bold text-primary hover:underline"
-                  >
-                    {PHONE}
-                  </a>
-                </div>
               </div>
+            </CardContent>
+          </Card>
+
+          {/* Bottom Right - Contact Form */}
+          <Card id="contact-form" className="h-full">
+            <CardHeader>
+              <CardTitle>Στείλτε μας μήνυμα</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form ref={formRef} action={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Ονοματεπώνυμο *
+                  </label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full rounded-md border border-gray-300 pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      Email *
+                    </label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full rounded-md border border-gray-300 pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                      Τηλέφωνο
+                    </label>
+                    <div className="relative">
+                      <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        className="w-full rounded-md border border-gray-300 pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Υπηρεσία ενδιαφέροντος
+                  </label>
+                  <input type="hidden" name="service" value={selectedService} />
+                  <Select value={selectedService} onValueChange={setSelectedService}>
+                    <SelectTrigger className="w-full">
+                      <Stethoscope className="h-4 w-4 text-gray-400 shrink-0" />
+                      <SelectValue placeholder="-- Επιλέξτε υπηρεσία --" />
+                    </SelectTrigger>
+                    <SelectContent position="popper" className="max-h-60 overflow-y-auto">
+                      {services.map((s) => (
+                        <SelectItem key={s.id} value={s.title}>{s.title}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Μήνυμα *
+                  </label>
+                  <div className="relative">
+                    <MessageSquare className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      required
+                      className="w-full rounded-md border border-gray-300 pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                    />
+                  </div>
+                </div>
+
+                {status === "error" && (
+                  <p className="text-sm text-red-600">{errorMsg}</p>
+                )}
+
+                {status === "success" ? (
+                  <div className="flex items-center gap-2 text-green-600">
+                    <CheckCircle className="h-5 w-5" />
+                    <span className="text-sm font-medium">Το μήνυμά σας στάλθηκε επιτυχώς!</span>
+                  </div>
+                ) : (
+                  <Button type="submit" className="w-full" disabled={status === "sending"}>
+                    {status === "sending" ? (
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    ) : (
+                      <Send className="mr-2 h-4 w-4" />
+                    )}
+                    {status === "sending" ? "Αποστολή..." : "Αποστολή"}
+                  </Button>
+                )}
+              </form>
             </CardContent>
           </Card>
         </div>
