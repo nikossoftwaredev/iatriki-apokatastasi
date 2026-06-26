@@ -33,6 +33,7 @@ import {
   Calendar,
   Zap,
   Atom,
+  Magnet,
 } from "lucide-react";
 
 interface ServicePageProps {
@@ -109,6 +110,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
   heart: <Heart className="h-8 w-8" />,
   zap: <Zap className="h-8 w-8" />,
   atom: <Atom className="h-8 w-8" />,
+  magnet: <Magnet className="h-8 w-8" />,
 };
 
 const categoryBadgeConfig = {

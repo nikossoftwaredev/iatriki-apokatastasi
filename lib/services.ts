@@ -45,6 +45,17 @@ export const services: Service[] = [
     category: "therapeutic",
   },
   {
+    id: "23",
+    slug: "magnitikos-diegertis",
+    title: "Μαγνητικός Διεγέρτης",
+    shortDescription:
+      "Θεραπεία υψηλής έντασης μαγνητικής διέγερσης για αναλγησία, αναγέννηση ιστών και αποκατάσταση σε μυοσκελετικές και νευρολογικές παθήσεις, χωρίς πόνο και χωρίς φάρμακα.",
+    iconName: "magnet",
+    iconColor: "#6366f1", // Indigo - magnetic field therapy
+    markdownFile: "magnitikos-diegertis.md",
+    category: "therapeutic",
+  },
+  {
     id: "16",
     slug: "cheirismoi-spondylikis-stilis",
     title: "Ιατρικοί χειρισμοί σπονδυλικής στήλης και αρθρώσεων",

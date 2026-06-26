@@ -19,6 +19,7 @@ import {
   Footprints,
   Radio,
   Heart,
+  Magnet,
   ArrowRight
 } from "lucide-react";
 
@@ -36,6 +37,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
   footprints: <Footprints className="h-6 w-6" />,
   radio: <Radio className="h-6 w-6" />,
   heart: <Heart className="h-6 w-6" />,
+  magnet: <Magnet className="h-6 w-6" />,
 };
 
 interface ServicesSectionProps {
