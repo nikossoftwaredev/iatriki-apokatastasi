@@ -6,7 +6,7 @@ import Link from "next/link";
 const conditions = [
   { label: "Πόνο στη μέση", href: "/services/prolotherapeia" },
   { label: "Αυχενικό σύνδρομο", href: "/services/prolotherapeia" },
-  { label: "Πόνο στο γόνατο", href: "/services/prp-therapeia" },
+  { label: "Πόνο στο γόνατο", href: "/services/prolotherapeia" },
   { label: "Ισχιαλγία", href: "/services/neuraltherapy" },
   { label: "Τενοντίτιδες", href: "/services/shock-wave" },
   { label: "Αθλητικές κακώσεις", href: "/services/fysiotherapeia" },

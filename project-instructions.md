@@ -102,7 +102,6 @@ The homepage includes the following sections:
 - Blog posts stored in lib/blogs/posts/
 - Sample posts created:
   - prolotherapia.md
-  - prp-therapy.md
   - chronic-pain-management.md
 - Frontmatter support with gray-matter
 - Static generation with generateStaticParams

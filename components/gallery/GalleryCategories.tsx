@@ -24,7 +24,7 @@ const categories = [
   {
     id: 2,
     title: "Θεραπευτικές Διαδικασίες",
-    description: "Εφαρμογές προλοθεραπείας, PRP και άλλων θεραπειών",
+    description: "Εφαρμογές προλοθεραπείας και άλλων θεραπειών",
     icon: Stethoscope,
     imageCount: 25,
     href: "/gallery/therapies",

@@ -87,7 +87,6 @@ export const navigation = [
 // Footer links
 export const footerLinks = {
   services: [
-    { name: "PRP Θεραπεία", href: "/services#prp" },
     { name: "Φυσικοθεραπεία", href: "/services#physiotherapy" },
     { name: "Βελονισμός", href: "/services#acupuncture" },
     { name: "Prolotherapy", href: "/services#prolotherapy" },

@@ -134,7 +134,7 @@ export const galleryImages = [
   },
   {
     id: 30,
-    src: "/gallery/graz/img-prp.jpg",
+    src: "/gallery/graz/img-prolotherapy.jpg",
     alt: "prolotherapy Εφαρμογή",
     category: "prolotherapy",
   },

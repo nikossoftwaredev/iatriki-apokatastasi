@@ -126,21 +126,10 @@ export const services: Service[] = [
     slug: "mesotherapeia",
     title: "Μεσοθεραπεία",
     shortDescription:
-      "Αντιμετώπιση επώδυνων μυοσκελετικών προβλημάτων, κυτταρίτιδας, αισθητικής κλπ.",
+      "Αντιμετώπιση επώδυνων μυοσκελετικών προβλημάτων κλπ.",
     iconName: "droplet",
     iconColor: "#14b8a6", // Teal - fluid/injection therapy
     markdownFile: "mesotherapeia.md",
-    category: "therapeutic",
-  },
-  {
-    id: "5",
-    slug: "botox-dysport",
-    title: "Βοτουλινική τοξίνη (Botox)",
-    shortDescription:
-      "Αντιμετώπιση σπαστικότητας και δυστονιών, ρυτίδων κλπ.",
-    iconName: "syringe",
-    iconColor: "#8b5cf6", // Purple - pharmaceutical/injection
-    markdownFile: "botox-dysport.md",
     category: "therapeutic",
   },
   {
@@ -152,17 +141,6 @@ export const services: Service[] = [
     iconName: "syringe",
     iconColor: "#0891b2", // Cyan - injection therapy
     markdownFile: "egchyseis-endarthrikees.md",
-    category: "therapeutic",
-  },
-  {
-    id: "13",
-    slug: "prp-therapeia",
-    title: "PRP (Platelet Rich Plasma)",
-    shortDescription:
-      "Αυτόλογη κυτταρική αναγέννηση - βιοδιέγερση κυττάρων δέρματος, μυών, χόνδρου, τενόντων, μέσω ένεσης με εμπλουτισμένο πλάσμα αίματος με αιμοπετάλια του ίδιου του ασθενούς. Για παθήσεις χόνδρων αρθρώσεων, κακώσεις - βλάβες μυών, τενόντων.",
-    iconName: "heart",
-    iconColor: "#ef4444", // Red - blood/cardiovascular
-    markdownFile: "prp-therapeia.md",
     category: "therapeutic",
   },
   {

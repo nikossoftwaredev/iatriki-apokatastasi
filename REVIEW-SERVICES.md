@@ -9,8 +9,6 @@
 ### Θεραπευτικές Πράξεις
 - [ ] Προλοθεραπεία — [δες σελίδα](https://iatriki-apokatastasi.vercel.app/services/prolotherapeia)
 - [ ] Φυσικοθεραπεία — [δες σελίδα](https://iatriki-apokatastasi.vercel.app/services/fysiotherapeia)
-- [ ] PRP (Platelet Rich Plasma) — [δες σελίδα](https://iatriki-apokatastasi.vercel.app/services/prp-therapeia)
-- [ ] Βοτουλινική τοξίνη (Botox) — [δες σελίδα](https://iatriki-apokatastasi.vercel.app/services/botox-dysport)
 - [ ] Οζονοθεραπεία — [δες σελίδα](https://iatriki-apokatastasi.vercel.app/services/ozonotherapeia)
 - [ ] Ειδική θεραπευτική γυμναστική — [δες σελίδα](https://iatriki-apokatastasi.vercel.app/services/therapeftiki-gymnastiki)
 - [ ] Κρουστικά κύματα (Shockwave) — [δες σελίδα](https://iatriki-apokatastasi.vercel.app/services/shock-wave)
